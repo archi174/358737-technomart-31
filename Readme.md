@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Артур Алибаев](https://up.htmlacademy.ru/htmlcss/31/user/358737).
-* Наставник: `Неизвестно`.
+* Наставник: [Лиза Пак](https://up.htmlacademy.ru/profession/frontender/11/htmlcss/user/5608).
 
 ---
 
