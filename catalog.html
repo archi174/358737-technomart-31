@@ -11,7 +11,7 @@
   </head>
   <body>
     <header>
-      <a>
+      <a href="index.html">
         <img src="img/logo-header.png" width="107" height="17" alt="Логотип Техномарта">
       </a>
       <form action="https://echo.htmlacademy.ru" method="post">
@@ -62,5 +62,69 @@
         </ul>
       </nav>
     </header>
+    <main>
+      <h1>Перфораторы</h1>
+      <ul>
+        <li>
+          <a href="index.html">Главная</a>
+        </li>
+        <li>
+          <a href="#">Каталог</a>
+        </li>
+        <li>
+          <a href="#">Инструмент</a>
+        </li>
+        <li>
+          <a href="#">Перфораторы</a>
+        </li>
+      </ul>
+      <section>
+        <h2>Фильтр:</h2>
+        <form action="https://echo.htmlacademy.ru" method="get">
+          <fieldset>
+            <legend>Цена:</legend>
+            <label for="filter-range"></label>
+            <input type="range" min="0" max="30000" value="5000" id="filter-range">
+            <p>0</p>
+            <p>30000</p>
+          </fieldset>
+          <fieldset>
+            <legend>Производители:</legend>
+            <p>
+              <label for="filter-bosch">Bosch</label>
+              <input type="checkbox" name="bosch" id="filter-bosch" checked>
+            </p>
+            <p>
+              <label for="filter-interskol">Интерскол</label>
+              <input type="checkbox" name="interskol" id="filter-interskol">
+            </p>
+            <p>
+              <label for="filter-makita">Makita</label>
+              <input type="checkbox" name="makita" id="filter-makita" checked>
+            </p>
+            <p>
+              <label for="">Dewalt</label>
+              <input type="checkbox" name="dewalt" id="filter-dewalt">
+            </p>
+            <p>
+              <label for="filter-hitachi">Hitachi</label>
+              <input type="checkbox" name="hitachi" id="filter-hitachi">
+            </p>
+          </fieldset>
+          <fieldset>
+            <legend>Питание:</legend>
+            <p>
+              <label for="power-battery">Аккумуляторные</label>
+              <input type="radio" name="power" value="battery" id="power-battery">
+            </p>
+            <p>
+              <label for="power-network">Сетевые</label>
+              <input type="radio" name="power" value="network" id="power-network">
+            </p>
+          </fieldset>
+          <button type="submit">Показать</button>
+        </form>
+      </section>
+    </main>
   </body>
 </html>
