@@ -56,10 +56,37 @@
   --basic-gray-extra-light: #F1F5F7;
   --basic-yellow: #FFD180;
 
-  --special-green: #63A63E;
   --special-yellow: #FFBF47;
   --special-blue: #3BBCE3;
   --special-pink: #DC91D8;
   --special-green: #8ED78F;
   --special-green-bright: #63A63E;
+}
+
+.page-body {
+  min-width: 1200px;
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: 400;
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+}
+
+.main-header {
+  background-color: var(--basic-gray-extra-light);
+}
+
+.main-header-logo {
+  text-decoration: none;
+  background-color: var(--basic-red);
+}
+
+.form-header-search {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
 }
