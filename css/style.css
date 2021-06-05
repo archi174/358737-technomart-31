@@ -1,3 +1,5 @@
+/* fonts */
+
 @font-face {
   font-family: "Cuprum";
   font-style: normal;
@@ -39,4 +41,25 @@
   src: local("PT Sans Bold"),
     url("fonts/ptsansbold.woff2") format("woff2"),
     url("fonts/ptsansbold.woff") format("woff");
+}
+
+/* variables */
+
+:root {
+  --basic-blue-extra-dark: #293449;
+  --basic-blue-light-dark: #32425C;
+  --basic-red: #EE3643;
+  --basic-white: #FFFFFF;
+  --basic-black: #000000;
+  --basic-gray: #A9A9A9;
+  --basic-gray-light: #F3F7F9;
+  --basic-gray-extra-light: #F1F5F7;
+  --basic-yellow: #FFD180;
+
+  --special-green: #63A63E;
+  --special-yellow: #FFBF47;
+  --special-blue: #3BBCE3;
+  --special-pink: #DC91D8;
+  --special-green: #8ED78F;
+  --special-green-bright: #63A63E;
 }
