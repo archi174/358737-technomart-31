@@ -5,48 +5,48 @@
   font-style: normal;
   font-weight: normal;
   src: local("Cuprum"),
-    url("fonts/cuprum.woff2") format("woff2"),
-    url("fonts/cuprum.woff") format("woff")
+    url("../fonts/cuprum.woff2") format("woff2"),
+    url("../fonts/cuprum.woff") format("woff")
 }
 @font-face {
   font-family: "Cuprum";
   font-style: normal;
   font-weight: bold;
   src: local("Cuprum"),
-    url("fonts/cuprumbold.woff2") format("woff2"),
-    url("fonts/cuprumbold.woff") format("woff");
+    url("../fonts/cuprumbold.woff2") format("woff2"),
+    url("../fonts/cuprumbold.woff") format("woff");
 }
 @font-face {
   font-family: "Cuprum";
   font-style: italic;
   font-weight: bold;
   src: local("Cuprum"),
-    url("fonts/cuprumbolditalic.woff2") format("woff2"),
-    url("fonts/cuprumbolditalic.woff") format("woff");
+    url("../fonts/cuprumbolditalic.woff2") format("woff2"),
+    url("../fonts/cuprumbolditalic.woff") format("woff");
 }
 @font-face {
   font-family: "Cuprum";
   font-style: italic;
   font-weight: normal;
   src: local("Cuprum"),
-    url("fonts/cuprumitalic.woff2") format("woff2"),
-    url("fonts/cuprumitalic.woff") format("woff");
+    url("../fonts/cuprumitalic.woff2") format("woff2"),
+    url("../fonts/cuprumitalic.woff") format("woff");
 }
 @font-face {
   font-family: "PT Sans";
   font-style: normal;
   font-weight: normal;
   src: local("PT Sans"),
-    url("fonts/ptsans.woff2") format("woff2"),
-    url("fonts/ptsans.woff") format("woff");
+    url("../fonts/ptsans.woff2") format("woff2"),
+    url("../fonts/ptsans.woff") format("woff");
 }
 @font-face {
   font-family: "PT Sans";
   font-style: normal;
   font-weight: bold;
   src: local("PT Sans"),
-    url("fonts/ptsansbold.woff2") format("woff2"),
-    url("fonts/ptsansbold.woff") format("woff");
+    url("../fonts/ptsansbold.woff2") format("woff2"),
+    url("../fonts/ptsansbold.woff") format("woff");
 }
 
 /* variables */
@@ -62,11 +62,15 @@
   --basic-gray-extra-light: #F1F5F7;
   --basic-yellow: #FFD180;
 
+  --basic-blue-black: #161D29;
   --special-yellow: #FFBF47;
   --special-blue: #3BBCE3;
   --special-pink: #DC91D8;
-  --special-green: #8ED78F;
+  --special-green: #5FBB2D;
+  --special-green-light: #8ED78F;
   --special-green-bright: #63A63E;
+  --special-red: #BA2732;
+  --special-grey: #C5C5C5;
 }
 
 .page-body {
@@ -76,9 +80,20 @@
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 24px;
-  font-weight: 400;
+  font-weight: normal;
   color: var(--basic-black);
   background-color: var(--basic-white);
+}
+
+.button {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--basic-white);
+  text-align: center;
+  border: none;
 }
 
 .main-header {
@@ -88,11 +103,117 @@
 .main-header-logo {
   text-decoration: none;
   background-color: var(--basic-red);
+  box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
+}
+
+.main-header-logo:hover,
+.main-header-logo:focus {
+  background-color: var(--basic-red);
+}
+
+.main-header-logo:active {
+  background-color: var(--special-red);
 }
 
 .form-header-search {
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
-  font-weight: 400;
+  font-weight: normal;
 }
+
+.bookmarks {
+  font-size: 18px;
+  line-height: 24px;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+/* не понимаю почему если цвет задать 255, 255, 255 работает, а если через переменную, то нет...? как быть? */
+.bookmarks:active {
+  /*color: rgba(var(--basic-white), 0.5);*/
+  background-color: var(--basic-blue-black);
+}
+
+.cart {
+  font-size: 18px;
+  line-height: 24px;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+/* не понимаю почему если цвет задать 255, 255, 255 работает, а если через переменную, то нет...? как быть? */
+.cart:active {
+  /*color: rgba(var(--basic-white), 0.5);*/
+  background-color: var(--basic-blue-black);
+}
+
+.order {
+  font-size: 18px;
+  line-height: 24px;
+  background-color: var(--special-green-bright);
+  text-decoration: none;
+}
+
+/* не понимаю почему если цвет задать 255, 255, 255 работает, а если через переменную, то нет...? как быть? */
+.order:active {
+  /*color: rgba(var(--basic-white), 0.5);*/
+}
+
+.order:hover,
+.order:focus {
+  background-color: var(--special-green);
+}
+
+.header-content {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 23px;
+  color: var(--basic-red);
+}
+
+.header-phone {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 30px;
+  color: var(--basic-red);
+  text-decoration: none;
+}
+
+.header-address {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  font-family: 24px;
+  color: var(--basic-blue-light-dark);
+}
+
+.login {
+  font-size: 21px;
+  line-height: 21px;
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+  text-decoration: none;
+}
+
+.login:active {
+  color: var(--basic-red);
+}
+
+.login:hover,
+.login:focus {
+  color: var(--special-grey);
+}
+
+.registration {
+  font-size: 21px;
+  line-height: 21px;
+  color: var(--basic-black);
+  text-decoration: none;
+}
+
