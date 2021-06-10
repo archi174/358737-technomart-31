@@ -74,6 +74,7 @@
   --special-red: #BA2732;
   --special-red-light: #CA2C37;
   --special-grey: #C5C5C5;
+  --special-gray-extra-light: #EAEAEA;
   --special-cory-light-extra: #F9F5F0;
 }
 
@@ -410,4 +411,52 @@ text-transform: uppercase;
 
 .features-item button:active {
   background-color: var(--special-green-dark);
+}
+
+.company-title {
+  background-color: var(--special-cory-light-extra);
+}
+
+.company-title h2 {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 30px;
+  color: var(--basic-blue-light-dark);
+  text-transform: uppercase;
+}
+
+.company-title a {
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: var(--basic-red);
+}
+
+.company-title a:hover,
+.company-title a:focus {
+  background-color: var(--special-red-light);
+}
+
+.company-title a:active {
+  background-color: var(--special-red);
+}
+
+.company-list {
+  list-style: none;
+}
+
+.company-item {
+  background-color: var(--basic-white);
+  border: 1px solid var(--special-gray-extra-light);
+}
+
+/*почему RGBA не работает с var ??*/
+.company-item:hover,
+.company-item:focus {
+  filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
+}
+
+.company-item:active {
+  opacity: 0.5;
 }
