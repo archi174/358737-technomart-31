@@ -504,3 +504,173 @@ text-transform: uppercase;
   color: var(--basic-blue-light-dark);
   text-transform: uppercase;
 }
+
+.about-content h3 {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 30px;
+  color: var(--basic-black);
+  text-transform: uppercase;
+}
+
+.about-content ul {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--basic-black);
+  list-style: none;
+}
+
+.about-content a.button {
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: var(--basic-red);
+}
+
+.about-content a.button:hover,
+.about-content a.button:focus {
+  background-color: var(--special-red-light);
+}
+
+.about-content a.button:active {
+  background-color: var(--special-red);
+}
+
+.about-contacts h3 {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 30px;
+  color: var(--basic-black);
+  text-transform: uppercase;
+}
+
+.about-contacts a.button {
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: var(--basic-red);
+}
+
+.about-contacts a.button:hover,
+.about-contacts a.button:focus {
+  background-color: var(--special-red-light);
+}
+
+.about-contacts a.button:active {
+  background-color: var(--special-red);
+}
+
+.main-footer {
+  background-color: var(--basic-blue-light-dark);
+}
+
+.main-footer-logo {
+  text-decoration: none;
+  background-color: var(--basic-red);
+  box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
+}
+
+.footer-nav {
+  list-style: none;
+}
+
+.footer-nav-item a {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--basic-gray-extra-light);
+  text-decoration: none;
+}
+
+.footer-nav-item a:hover,
+.footer-nav-item a:focus {
+  text-decoration: underline;
+}
+
+.footer-nav-item a:active {
+  text-decoration: none;
+  opacity: 0.5;
+}
+
+.footer-contacts {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--basic-gray-extra-light);
+}
+
+.footer-bar {
+  list-style: none;
+}
+
+.footer-bar-item a {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--basic-yellow);
+  text-decoration: none;
+}
+
+.footer-bar-item a:hover,
+.footer-bar-item a:focus {
+  text-decoration: underline;
+}
+
+.footer-bar-item a:active {
+  opacity: 0.5;
+}
+
+.footer-copyright {
+  ont-family: "Cuprum", Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--basic-white);
+}
+
+.footer-social {
+  list-style: none;
+}
+
+.footer-social a {
+  text-decoration: none;
+  color: var(--basic-white);
+  background: linear-gradient(0deg, #212A3A, #212A3A);
+}
+
+.footer-social a:hover,
+.footer-social a:focus,
+.footer-social a:active {
+  background: var(--basic-red);
+}
+
+.footer-feedback a[href^="mailto:"],
+.footer-developer a[href^="https:"] {
+  color: var(--basic-yellow);
+  text-decoration: none;
+}
+
+.footer-feedback a[href^="mailto:"]:hover,
+.footer-feedback a[href^="mailto:"]:focus,
+.footer-developer a[href^="https:"]:hover,
+.footer-developer a[href^="https:"]:focus {
+  text-decoration: underline;
+}
+
+.footer-feedback a[href^="mailto:"]:active,
+.footer-developer a[href^="https:"]:active {
+  color: var(--basic-red);
+  text-decoration: none;
+}
