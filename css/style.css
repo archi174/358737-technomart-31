@@ -70,6 +70,7 @@
   --special-green-light: #8ED78F;
   --special-green-bright: #63A63E;
   --special-red: #BA2732;
+  --special-red-light: #CA2C37;
   --special-grey: #C5C5C5;
 }
 
@@ -252,4 +253,79 @@
 
 .nav-list a:active {
   opacity: 0.5;
+}
+
+.page-main {
+  background-color: var(--basic-white);
+}
+
+.promo-block {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  color: var(--basic-white);
+}
+
+/*не понимаю почему :nth-child начинает работать со значения 2??
+  что он принимает за первый элемент?? даже в инпекторе хром не нашел...*/
+.promo-block .promo-block-item:nth-child(2) {
+  background-color: var(--special-yellow);
+}
+.promo-block .promo-block-item:nth-child(3) {
+  background-color: var(--special-blue);
+}
+.promo-block .promo-block-item:nth-child(4) {
+  background-color: var(--special-pink);
+}
+.promo-block .promo-block-item:nth-child(5) {
+  background-color: var(--special-green-light);
+}
+.promo-block .promo-block-item:nth-child(6) {
+  background-color: var(--special-yellow);
+}
+
+.promo-block-item a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--basic-white);
+}
+
+.promo-slider {
+  background-color: var(--basic-gray);
+}
+
+.promo-slider-list {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  list-style: none;
+}
+
+.promo-slider-list h3 {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.promo-slider-list p {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.promo-slider-slid a {
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: var(--basic-red);
+}
+
+.promo-slider-slid a:hover,
+.promo-slider-slid a:focus {
+  background-color: var(--special-red-light);
+}
+
+.promo-slider-slid a:active {
+  background-color: var(--special-red);
 }
