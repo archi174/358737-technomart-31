@@ -69,9 +69,12 @@
   --special-green: #5FBB2D;
   --special-green-light: #8ED78F;
   --special-green-bright: #63A63E;
+  --special-green-dark: #518534;
+  --special-green-dark-extra: #367315;
   --special-red: #BA2732;
   --special-red-light: #CA2C37;
   --special-grey: #C5C5C5;
+  --special-cory-light-extra: #F9F5F0;
 }
 
 .page-body {
@@ -328,4 +331,83 @@
 
 .promo-slider-slid a:active {
   background-color: var(--special-red);
+}
+
+.feature-title {
+  background-color: var(--special-cory-light-extra);
+}
+
+.feature-title h2 {
+font-family: "Cuprum", Arial, sans-serif;
+font-style: normal;
+font-weight: normal;
+font-size: 30px;
+line-height: 30px;
+color: var(--basic-blue-light-dark);
+text-transform: uppercase;
+}
+
+.feature-title a {
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: var(--basic-red);
+}
+
+.feature-title a:hover,
+.feature-title a:focus {
+  background-color: var(--special-red-light);
+}
+
+.feature-title a:active {
+  background-color: var(--special-red);
+}
+
+.features-list {
+  list-style: none;
+}
+
+.features-item {
+  text-align: center;
+}
+
+.features-item h3 {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px;
+  color: var(--basic-black);
+}
+
+.features-item del {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 18px;
+  color: var(--basic-gray);
+  text-transform: uppercase;
+}
+
+.features-item a {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 18px;
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+  border: none;
+}
+
+.features-item button {
+  background-color: var(--special-green-bright);
+  text-transform: uppercase;
+  box-shadow: inset 0px -3px 0px var(--special-green-dark-extra);
+  border-radius: 2px;
+}
+
+.features-item button:hover,
+.features-item button:focus {
+  background-color: var(--special-green);
+}
+
+.features-item button:active {
+  background-color: var(--special-green-dark);
 }
