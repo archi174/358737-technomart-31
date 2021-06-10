@@ -200,14 +200,13 @@
   background-color: var(--basic-white);
   text-decoration: none;
 }
-
-.login:active {
-  color: var(--basic-red);
-}
-
 .login:hover,
 .login:focus {
   color: var(--special-grey);
+}
+
+.login:active {
+  color: var(--basic-red);
 }
 
 .registration {
@@ -217,3 +216,40 @@
   text-decoration: none;
 }
 
+.registration:hover,
+.registration:focus {
+  color: var(--special-grey);
+}
+
+.registration:active {
+  color: var(--basic-red);
+}
+
+.main-nav {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--basic-white);
+  background-color: var(--basic-blue-light-dark);
+  box-shadow: inset 0px -5px 0px var(--basic-blue-extra-dark);
+}
+
+.nav-list {
+  list-style: none;
+}
+
+.nav-list a {
+  color: var(--basic-white);
+  text-decoration: none;
+}
+
+.nav-list a:hover,
+.nav-list a:focus {
+  background-color: var(--basic-blue-extra-dark);
+}
+
+.nav-list a:active {
+  opacity: 0.5;
+}
