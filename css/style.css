@@ -674,3 +674,43 @@ text-transform: uppercase;
   color: var(--basic-red);
   text-decoration: none;
 }
+
+.modal {
+  background-color: var(--basic-white);
+  border-top: 7px solid var(--basic-red);
+  filter: drop-shadow(0px 20px 40px rgba(0, 0, 0, 0.75));
+}
+
+.modal-message input,
+.modal-message textarea {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: normal;
+  color: var(--basic-gray);
+  border: 2px solid var(--special-grey);
+  border-radius: 2px;
+}
+
+.modal-message label {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--basic-black);
+}
+
+.modal-message button.button {
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: var(--basic-red);
+}
+
+.modal-message button.button:hover,
+.modal-message button.button:focus {
+  background-color: var(--special-red-light);
+}
+
+.modal-message button.button:active {
+  background-color: var(--special-red);
