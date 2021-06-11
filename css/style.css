@@ -54,17 +54,20 @@
 :root {
   --basic-blue-extra-dark: #293449;
   --basic-blue-light-dark: #32425C;
+  --basic-blue-black: #161D29;
   --basic-red: #EE3643;
   --basic-white: #FFFFFF;
+  --basic-white-rgb: 255,255,255;
   --basic-black: #000000;
+  --basic-black-rgb: 0,0,0;
   --basic-gray: #A9A9A9;
   --basic-gray-light: #F3F7F9;
   --basic-gray-extra-light: #F1F5F7;
   --basic-yellow: #FFD180;
 
-  --basic-blue-black: #161D29;
   --special-yellow: #FFBF47;
   --special-blue: #3BBCE3;
+  --special-blue-dark: #212A3A;
   --special-pink: #DC91D8;
   --special-green: #5FBB2D;
   --special-green-light: #8ED78F;
@@ -92,7 +95,6 @@
 
 .button {
   font-family: "Cuprum", Arial, sans-serif;
-  font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 18px;
@@ -134,9 +136,8 @@
   text-decoration: none;
 }
 
-/* не понимаю почему если цвет задать 255, 255, 255 работает, а если через переменную, то нет...? как быть? */
 .bookmarks:active {
-  /*color: rgba(var(--basic-white), 0.5);*/
+  color: rgba(var(--basic-white-rgb), 0.5);
   background-color: var(--basic-blue-black);
 }
 
@@ -147,9 +148,8 @@
   text-decoration: none;
 }
 
-/* не понимаю почему если цвет задать 255, 255, 255 работает, а если через переменную, то нет...? как быть? */
 .cart:active {
-  /*color: rgba(var(--basic-white), 0.5);*/
+  color: rgba(var(--basic-white-rgb), 0.5);
   background-color: var(--basic-blue-black);
 }
 
@@ -160,9 +160,8 @@
   text-decoration: none;
 }
 
-/* не понимаю почему если цвет задать 255, 255, 255 работает, а если через переменную, то нет...? как быть? */
 .order:active {
-  /*color: rgba(var(--basic-white), 0.5);*/
+  rgba(var(--basic-white-rgb), 0.5);
 }
 
 .order:hover,
@@ -181,7 +180,6 @@
 
 .header-phone {
   font-family: "Cuprum", Arial, sans-serif;
-  font-style: normal;
   font-weight: bold;
   font-size: 21px;
   line-height: 30px;
@@ -191,7 +189,6 @@
 
 .header-address {
   font-family: "Cuprum", Arial, sans-serif;
-  font-style: normal;
   font-weight: normal;
   font-size: 14px;
   font-family: 24px;
@@ -232,7 +229,6 @@
 
 .main-nav {
   font-family: "Cuprum", Arial, sans-serif;
-  font-style: normal;
   font-weight: normal;
   font-size: 18px;
   line-height: 24px;
@@ -265,7 +261,6 @@
 
 .promo-block {
   font-family: "Cuprum", Arial, sans-serif;
-  font-style: normal;
   font-weight: bold;
   font-size: 24px;
   line-height: 30px;
@@ -274,19 +269,19 @@
 
 /*не понимаю почему :nth-child начинает работать со значения 2??
   что он принимает за первый элемент?? даже в инпекторе хром не нашел...*/
-.promo-block .promo-block-item:nth-child(2) {
+.materials {
   background-color: var(--special-yellow);
 }
-.promo-block .promo-block-item:nth-child(3) {
+.tools {
   background-color: var(--special-blue);
 }
-.promo-block .promo-block-item:nth-child(4) {
+.technic {
   background-color: var(--special-pink);
 }
-.promo-block .promo-block-item:nth-child(5) {
+.discount {
   background-color: var(--special-green-light);
 }
-.promo-block .promo-block-item:nth-child(6) {
+.delivery {
   background-color: var(--special-yellow);
 }
 
@@ -302,7 +297,6 @@
 
 .promo-slider-list {
   font-family: "Cuprum", Arial, sans-serif;
-  font-style: normal;
   font-weight: normal;
   list-style: none;
 }
@@ -339,13 +333,12 @@
 }
 
 .feature-title h2 {
-font-family: "Cuprum", Arial, sans-serif;
-font-style: normal;
-font-weight: normal;
-font-size: 30px;
-line-height: 30px;
-color: var(--basic-blue-light-dark);
-text-transform: uppercase;
+  font-family: "Cuprum", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 30px;
+  color: var(--basic-blue-light-dark);
+  text-transform: uppercase;
 }
 
 .feature-title a {
@@ -388,7 +381,6 @@ text-transform: uppercase;
 
 .features-item a {
   font-family: "PT Sans", Arial, sans-serif;
-  font-style: normal;
   font-weight: bold;
   font-size: 17px;
   line-height: 18px;
@@ -419,7 +411,6 @@ text-transform: uppercase;
 
 .company-title h2 {
   font-family: "Cuprum", Arial, sans-serif;
-  font-style: normal;
   font-weight: normal;
   font-size: 30px;
   line-height: 30px;
@@ -451,10 +442,9 @@ text-transform: uppercase;
   border: 1px solid var(--special-gray-extra-light);
 }
 
-/*почему RGBA не работает с var ??*/
 .company-item:hover,
 .company-item:focus {
-  filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
+  filter: drop-shadow(0px 4px 20px rgba(var(--basic-black-rgb), 0.15));
 }
 
 .company-item:active {
@@ -467,7 +457,6 @@ text-transform: uppercase;
 
 .service h2 {
   font-family: "Cuprum", Arial, sans-serif;
-  font-style: normal;
   font-weight: normal;
   font-size: 30px;
   line-height: 30px;
@@ -497,7 +486,6 @@ text-transform: uppercase;
 
 .service-slider-item h3 {
   font-family: "Cuprum", Arial, sans-serif;
-  font-style: normal;
   font-weight: normal;
   font-size: 30px;
   line-height: 30px;
@@ -507,7 +495,6 @@ text-transform: uppercase;
 
 .about-content h3 {
   font-family: "Cuprum", Arial, sans-serif;
-  font-style: normal;
   font-weight: normal;
   font-size: 30px;
   line-height: 30px;
@@ -517,7 +504,6 @@ text-transform: uppercase;
 
 .about-content ul {
   font-family: "Cuprum", Arial, sans-serif;
-  font-style: normal;
   font-weight: normal;
   font-size: 18px;
   line-height: 24px;
@@ -542,7 +528,6 @@ text-transform: uppercase;
 
 .about-contacts h3 {
   font-family: "Cuprum", Arial, sans-serif;
-  font-style: normal;
   font-weight: normal;
   font-size: 30px;
   line-height: 30px;
@@ -572,7 +557,7 @@ text-transform: uppercase;
 .main-footer-logo {
   text-decoration: none;
   background-color: var(--basic-red);
-  box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
+  box-shadow: inset 0px -5px 0px rgba(var(--basic-black-rgb), 0.24);
 }
 
 .footer-nav {
@@ -581,7 +566,6 @@ text-transform: uppercase;
 
 .footer-nav-item a {
   font-family: "Cuprum", Arial, sans-serif;
-  font-style: normal;
   font-weight: normal;
   font-size: 18px;
   line-height: 24px;
@@ -601,7 +585,6 @@ text-transform: uppercase;
 
 .footer-contacts {
   font-family: "Cuprum", Arial, sans-serif;
-  font-style: normal;
   font-weight: normal;
   font-size: 18px;
   line-height: 24px;
@@ -614,7 +597,6 @@ text-transform: uppercase;
 
 .footer-bar-item a {
   font-family: "Cuprum", Arial, sans-serif;
-  font-style: normal;
   font-weight: normal;
   font-size: 18px;
   line-height: 24px;
@@ -632,8 +614,7 @@ text-transform: uppercase;
 }
 
 .footer-copyright {
-  ont-family: "Cuprum", Arial, sans-serif;
-  font-style: normal;
+  font-family: "Cuprum", Arial, sans-serif;
   font-weight: normal;
   font-size: 16px;
   line-height: 18px;
@@ -647,7 +628,7 @@ text-transform: uppercase;
 .footer-social a {
   text-decoration: none;
   color: var(--basic-white);
-  background: linear-gradient(0deg, #212A3A, #212A3A);
+  background: linear-gradient(0deg, var(--special-blue-dark), var(--special-blue-dark));
 }
 
 .footer-social a:hover,
@@ -678,7 +659,7 @@ text-transform: uppercase;
 .modal {
   background-color: var(--basic-white);
   border-top: 7px solid var(--basic-red);
-  filter: drop-shadow(0px 20px 40px rgba(0, 0, 0, 0.75));
+  filter: drop-shadow(0px 20px 40px rgba(var(--basic-black-rgb), 0.75));
 }
 
 .modal-message input,
@@ -694,7 +675,6 @@ text-transform: uppercase;
 
 .modal-message label {
   font-family: "Cuprum", Arial, sans-serif;
-  font-style: normal;
   font-weight: normal;
   font-size: 18px;
   line-height: 24px;
