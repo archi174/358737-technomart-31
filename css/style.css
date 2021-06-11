@@ -1,0 +1,696 @@
+/* fonts */
+
+@font-face {
+  font-family: "Cuprum";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Cuprum"),
+    url("../fonts/cuprum.woff2") format("woff2"),
+    url("../fonts/cuprum.woff") format("woff")
+}
+@font-face {
+  font-family: "Cuprum";
+  font-style: normal;
+  font-weight: bold;
+  src: local("Cuprum"),
+    url("../fonts/cuprumbold.woff2") format("woff2"),
+    url("../fonts/cuprumbold.woff") format("woff");
+}
+@font-face {
+  font-family: "Cuprum";
+  font-style: italic;
+  font-weight: bold;
+  src: local("Cuprum"),
+    url("../fonts/cuprumbolditalic.woff2") format("woff2"),
+    url("../fonts/cuprumbolditalic.woff") format("woff");
+}
+@font-face {
+  font-family: "Cuprum";
+  font-style: italic;
+  font-weight: normal;
+  src: local("Cuprum"),
+    url("../fonts/cuprumitalic.woff2") format("woff2"),
+    url("../fonts/cuprumitalic.woff") format("woff");
+}
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: normal;
+  src: local("PT Sans"),
+    url("../fonts/ptsans.woff2") format("woff2"),
+    url("../fonts/ptsans.woff") format("woff");
+}
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: bold;
+  src: local("PT Sans"),
+    url("../fonts/ptsansbold.woff2") format("woff2"),
+    url("../fonts/ptsansbold.woff") format("woff");
+}
+
+/* variables */
+
+:root {
+  --basic-blue-extra-dark: #293449;
+  --basic-blue-light-dark: #32425C;
+  --basic-blue-black: #161D29;
+  --basic-red: #EE3643;
+  --basic-white: #FFFFFF;
+  --basic-white-rgb: 255,255,255;
+  --basic-black: #000000;
+  --basic-black-rgb: 0,0,0;
+  --basic-gray: #A9A9A9;
+  --basic-gray-light: #F3F7F9;
+  --basic-gray-extra-light: #F1F5F7;
+  --basic-yellow: #FFD180;
+
+  --special-yellow: #FFBF47;
+  --special-blue: #3BBCE3;
+  --special-blue-dark: #212A3A;
+  --special-blue-light-dark: #405069;
+  --special-pink: #DC91D8;
+  --special-green: #5FBB2D;
+  --special-green-light: #8ED78F;
+  --special-green-bright: #63A63E;
+  --special-green-dark: #518534;
+  --special-green-dark-extra: #367315;
+  --special-red: #BA2732;
+  --special-red-light: #CA2C37;
+  --special-grey: #C5C5C5;
+  --special-gray-extra-light: #EAEAEA;
+  --special-cory-light-extra: #F9F5F0;
+}
+
+.page-body {
+  min-width: 960px;
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: normal;
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+}
+
+.button {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--basic-white);
+  text-align: center;
+  border: none;
+}
+
+.main-header {
+  background-color: var(--basic-gray-extra-light);
+}
+
+.main-header-logo {
+  text-decoration: none;
+  background-color: var(--basic-red);
+  box-shadow: inset 0px -5px 0px rgba(var(--basic-black-rgb), 0.24);
+}
+
+.main-header-logo:hover,
+.main-header-logo:focus {
+  background-color: var(--basic-red);
+}
+
+.main-header-logo:active {
+  background-color: var(--special-red);
+}
+
+.form-header-search {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: normal;
+}
+
+.bookmarks {
+  font-size: 18px;
+  line-height: 24px;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.bookmarks:active {
+  color: rgba(var(--basic-white-rgb), 0.5);
+  background-color: var(--basic-blue-black);
+}
+
+.cart {
+  font-size: 18px;
+  line-height: 24px;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.cart:active {
+  color: rgba(var(--basic-white-rgb), 0.5);
+  background-color: var(--basic-blue-black);
+}
+
+.order {
+  font-size: 18px;
+  line-height: 24px;
+  background-color: var(--special-green-bright);
+  text-decoration: none;
+}
+
+.order:active {
+  color: rgba(var(--basic-white-rgb), 0.5);
+}
+
+.order:hover,
+.order:focus {
+  background-color: var(--special-green);
+}
+
+.header-content {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 23px;
+  color: var(--basic-red);
+}
+
+.header-phone {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 30px;
+  color: var(--basic-red);
+  text-decoration: none;
+}
+
+.header-address {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--basic-blue-light-dark);
+}
+
+.login {
+  font-size: 21px;
+  line-height: 21px;
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+  text-decoration: none;
+}
+.login:hover,
+.login:focus {
+  color: var(--special-grey);
+}
+
+.login:active {
+  color: var(--basic-red);
+}
+
+.registration {
+  font-size: 21px;
+  line-height: 21px;
+  color: var(--basic-black);
+  text-decoration: none;
+}
+
+.registration:hover,
+.registration:focus {
+  color: var(--special-grey);
+}
+
+.registration:active {
+  color: var(--basic-red);
+}
+
+.main-nav {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--basic-white);
+  background-color: var(--basic-blue-light-dark);
+  box-shadow: inset 0px -5px 0px var(--basic-blue-extra-dark);
+}
+
+.nav-list {
+  list-style: none;
+}
+
+.nav-list a {
+  color: var(--basic-white);
+  text-decoration: none;
+}
+
+.nav-list a:hover,
+.nav-list a:focus {
+  background-color: var(--basic-blue-extra-dark);
+}
+
+.nav-list a:active {
+  opacity: 0.5;
+}
+
+.page-main {
+  background-color: var(--basic-white);
+}
+
+.promo-block {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  color: var(--basic-white);
+}
+
+.materials {
+  background-color: var(--special-yellow);
+}
+.tools {
+  background-color: var(--special-blue);
+}
+.technic {
+  background-color: var(--special-pink);
+}
+.discount {
+  background-color: var(--special-green-light);
+}
+.delivery {
+  background-color: var(--special-yellow);
+}
+
+.promo-block-item a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--basic-white);
+}
+
+.promo-slider {
+  background-color: var(--basic-gray);
+}
+
+.promo-slider-list {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-weight: normal;
+  list-style: none;
+}
+
+.promo-slider-list h3 {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.promo-slider-list p {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.promo-slider-slid a {
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: var(--basic-red);
+}
+
+.promo-slider-slid a:hover,
+.promo-slider-slid a:focus {
+  background-color: var(--special-red-light);
+}
+
+.promo-slider-slid a:active {
+  background-color: var(--special-red);
+}
+
+.feature-title {
+  background-color: var(--special-cory-light-extra);
+}
+
+.feature-title h2 {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 30px;
+  color: var(--basic-blue-light-dark);
+  text-transform: uppercase;
+}
+
+.feature-title a {
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: var(--basic-red);
+}
+
+.feature-title a:hover,
+.feature-title a:focus {
+  background-color: var(--special-red-light);
+}
+
+.feature-title a:active {
+  background-color: var(--special-red);
+}
+
+.features-list {
+  list-style: none;
+}
+
+.features-item {
+  text-align: center;
+}
+
+.features-item h3 {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px;
+  color: var(--basic-black);
+}
+
+.features-item del {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 18px;
+  color: var(--basic-gray);
+  text-transform: uppercase;
+}
+
+.features-item a {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 18px;
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+  border: none;
+}
+
+.features-item button {
+  background-color: var(--special-green-bright);
+  text-transform: uppercase;
+  box-shadow: inset 0px -3px 0px var(--special-green-dark-extra);
+  border-radius: 2px;
+}
+
+.features-item button:hover,
+.features-item button:focus {
+  background-color: var(--special-green);
+}
+
+.features-item button:active {
+  background-color: var(--special-green-dark);
+}
+
+.company-title {
+  background-color: var(--special-cory-light-extra);
+}
+
+.company-title h2 {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 30px;
+  color: var(--basic-blue-light-dark);
+  text-transform: uppercase;
+}
+
+.company-title a {
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: var(--basic-red);
+}
+
+.company-title a:hover,
+.company-title a:focus {
+  background-color: var(--special-red-light);
+}
+
+.company-title a:active {
+  background-color: var(--special-red);
+}
+
+.company-list {
+  list-style: none;
+}
+
+.company-item {
+  background-color: var(--basic-white);
+  border: 1px solid var(--special-gray-extra-light);
+}
+
+.company-item:hover,
+.company-item:focus {
+  filter: drop-shadow(0px 4px 20px rgba(var(--basic-black-rgb), 0.15));
+}
+
+.company-item:active {
+  opacity: 0.5;
+}
+
+.service {
+  background-color: var(--basic-gray-extra-light);
+}
+
+.service h2 {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 30px;
+  color: var(--basic-black);
+  text-transform: uppercase;
+}
+
+.service-slider-tab {
+  list-style: none;
+}
+
+.service-slider-tab button {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 30px;
+  color: var(--basic-white);
+  background-color: var(--basic-blue-light-dark);
+  box-shadow: 0px 1px 0px var(--basic-blue-extra-dark), inset 0px 1px 0px var(--special-blue-light-dark);
+  border: none;
+}
+
+.service-slider-tab button.tab-current {
+  background-color: var(--basic-white);
+  color: var(--basic-blue-light-dark);
+  box-shadow: 0px 1px 0px var(--basic-white);
+}
+
+.service-slider-item h3 {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 30px;
+  color: var(--basic-blue-light-dark);
+  text-transform: uppercase;
+}
+
+.about-content h3 {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 30px;
+  color: var(--basic-black);
+  text-transform: uppercase;
+}
+
+.about-content ul {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--basic-black);
+  list-style: none;
+}
+
+.about-content a.button {
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: var(--basic-red);
+}
+
+.about-content a.button:hover,
+.about-content a.button:focus {
+  background-color: var(--special-red-light);
+}
+
+.about-content a.button:active {
+  background-color: var(--special-red);
+}
+
+.about-contacts h3 {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 30px;
+  color: var(--basic-black);
+  text-transform: uppercase;
+}
+
+.about-contacts a.button {
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: var(--basic-red);
+}
+
+.about-contacts a.button:hover,
+.about-contacts a.button:focus {
+  background-color: var(--special-red-light);
+}
+
+.about-contacts a.button:active {
+  background-color: var(--special-red);
+}
+
+.main-footer {
+  background-color: var(--basic-blue-light-dark);
+}
+
+.main-footer-logo {
+  text-decoration: none;
+  background-color: var(--basic-red);
+  box-shadow: inset 0px -5px 0px rgba(var(--basic-black-rgb), 0.24);
+}
+
+.footer-nav {
+  list-style: none;
+}
+
+.footer-nav-item a {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--basic-gray-extra-light);
+  text-decoration: none;
+}
+
+.footer-nav-item a:hover,
+.footer-nav-item a:focus {
+  text-decoration: underline;
+}
+
+.footer-nav-item a:active {
+  text-decoration: none;
+  opacity: 0.5;
+}
+
+.footer-contacts {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--basic-gray-extra-light);
+}
+
+.footer-bar {
+  list-style: none;
+}
+
+.footer-bar-item a {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--basic-yellow);
+  text-decoration: none;
+}
+
+.footer-bar-item a:hover,
+.footer-bar-item a:focus {
+  text-decoration: underline;
+}
+
+.footer-bar-item a:active {
+  opacity: 0.5;
+}
+
+.footer-copyright {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--basic-white);
+}
+
+.footer-social {
+  list-style: none;
+}
+
+.footer-social a {
+  text-decoration: none;
+  color: var(--basic-white);
+  background: linear-gradient(0deg, var(--special-blue-dark), var(--special-blue-dark));
+}
+
+.footer-social a:hover,
+.footer-social a:focus,
+.footer-social a:active {
+  background: var(--basic-red);
+}
+
+.footer-feedback a[href^="mailto:"],
+.footer-developer a[href^="https:"] {
+  color: var(--basic-yellow);
+  text-decoration: none;
+}
+
+.footer-feedback a[href^="mailto:"]:hover,
+.footer-feedback a[href^="mailto:"]:focus,
+.footer-developer a[href^="https:"]:hover,
+.footer-developer a[href^="https:"]:focus {
+  text-decoration: underline;
+}
+
+.footer-feedback a[href^="mailto:"]:active,
+.footer-developer a[href^="https:"]:active {
+  color: var(--basic-red);
+  text-decoration: none;
+}
+
+.modal {
+  background-color: var(--basic-white);
+  border-top: 7px solid var(--basic-red);
+  filter: drop-shadow(0px 20px 40px rgba(var(--basic-black-rgb), 0.75));
+}
+
+.modal-message input,
+.modal-message textarea {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: normal;
+  color: var(--basic-gray);
+  border: 2px solid var(--special-grey);
+  border-radius: 2px;
+}
+
+.modal-message label {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--basic-black);
+}
+
+.modal-message button.button {
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: var(--basic-red);
+}
+
+.modal-message button.button:hover,
+.modal-message button.button:focus {
+  background-color: var(--special-red-light);
+}
+
+.modal-message button.button:active {
+  background-color: var(--special-red);
+}
