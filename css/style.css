@@ -68,6 +68,7 @@
   --special-yellow: #FFBF47;
   --special-blue: #3BBCE3;
   --special-blue-dark: #212A3A;
+  --special-blue-light-dark: #405069;
   --special-pink: #DC91D8;
   --special-green: #5FBB2D;
   --special-green-light: #8ED78F;
@@ -110,7 +111,7 @@
 .main-header-logo {
   text-decoration: none;
   background-color: var(--basic-red);
-  box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
+  box-shadow: inset 0px -5px 0px rgba(var(--basic-black-rgb), 0.24);
 }
 
 .main-header-logo:hover,
@@ -161,7 +162,7 @@
 }
 
 .order:active {
-  rgba(var(--basic-white-rgb), 0.5);
+  color: rgba(var(--basic-white-rgb), 0.5);
 }
 
 .order:hover,
@@ -191,7 +192,7 @@
   font-family: "Cuprum", Arial, sans-serif;
   font-weight: normal;
   font-size: 14px;
-  font-family: 24px;
+  line-height: 24px;
   color: var(--basic-blue-light-dark);
 }
 
@@ -267,8 +268,6 @@
   color: var(--basic-white);
 }
 
-/*не понимаю почему :nth-child начинает работать со значения 2??
-  что он принимает за первый элемент?? даже в инпекторе хром не нашел...*/
 .materials {
   background-color: var(--special-yellow);
 }
@@ -474,7 +473,7 @@
   line-height: 30px;
   color: var(--basic-white);
   background-color: var(--basic-blue-light-dark);
-  box-shadow: 0px 1px 0px var(--basic-blue-extra-dark), inset 0px 1px 0px #405069;
+  box-shadow: 0px 1px 0px var(--basic-blue-extra-dark), inset 0px 1px 0px var(--special-blue-light-dark);
   border: none;
 }
 
@@ -694,3 +693,4 @@
 
 .modal-message button.button:active {
   background-color: var(--special-red);
+}
