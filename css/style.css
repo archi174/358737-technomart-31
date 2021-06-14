@@ -917,3 +917,15 @@
 .pagination-item-current a:active {
   background-color: var(--basic-red);
 }
+
+.about-product {
+  background-color: var(--basic-gray-extra-light);
+}
+
+.about-product h2 {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
