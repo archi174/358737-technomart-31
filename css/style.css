@@ -185,6 +185,8 @@
   font-size: 21px;
   line-height: 30px;
   color: var(--basic-red);
+  background-color: var(--basic-gray-light);
+  border: 3px solid var(--basic-white);
   text-decoration: none;
 }
 
@@ -693,4 +695,42 @@
 
 .modal-message button.button:active {
   background-color: var(--special-red);
+}
+
+/* catalog.html */
+
+.user {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 21px;
+  line-height: 21px;
+  color: var(--basic-black);
+  background-color: rgba(var(--basic-black-rgb), 0.0001);
+  text-decoration: none;
+}
+
+.user:active {
+  color: var(--special-grey);
+}
+
+.user-orders,
+.user-account {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--basic-blue-light-dark);
+  text-decoration: none;
+}
+
+.user-orders:hover,
+.user-orders:focus,
+.user-account:hover,
+.user-account:focus {
+  color: var(--basic-red);
+}
+
+.user-orders:active,
+.user-account:active {
+  color: var(--special-grey);
 }
