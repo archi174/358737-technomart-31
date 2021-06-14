@@ -61,9 +61,9 @@
         </ul>
       </nav>
     </header>
-    <main>
-      <h1>Перфораторы</h1>
-      <ul>
+    <main class="page-main">
+      <h1 class="page-title">Перфораторы</h1>
+      <ul class="breadcrumbs">
         <li>
           <a href="index.html">Главная</a>
         </li>
@@ -77,9 +77,9 @@
           <a href="#">Перфораторы</a>
         </li>
       </ul>
-      <section>
+      <section class="filters">
         <h2>Фильтр:</h2>
-        <form action="https://echo.htmlacademy.ru" method="get">
+        <form class="filter-form" action="https://echo.htmlacademy.ru" method="get">
           <fieldset>
             <legend>Цена:</legend>
             <label for="filter-range"></label>
@@ -91,42 +91,46 @@
           </fieldset>
           <fieldset>
             <legend>Производители:</legend>
-            <p>
+            <ul>
+            <li class="filter-checkbox">
               <label for="filter-bosch">Bosch</label>
               <input type="checkbox" name="bosch" id="filter-bosch" checked>
-            </p>
-            <p>
+            </li>
+            <li class="filter-checkbox">
               <label for="filter-interskol">Интерскол</label>
               <input type="checkbox" name="interskol" id="filter-interskol">
-            </p>
-            <p>
+            </li>
+            <li class="filter-checkbox">
               <label for="filter-makita">Makita</label>
               <input type="checkbox" name="makita" id="filter-makita" checked>
-            </p>
-            <p>
+            </li>
+            <li class="filter-checkbox">
               <label for="filter-dewalt">Dewalt</label>
               <input type="checkbox" name="dewalt" id="filter-dewalt">
-            </p>
-            <p>
+            </li>
+            <li class="filter-checkbox">
               <label for="filter-hitachi">Hitachi</label>
               <input type="checkbox" name="hitachi" id="filter-hitachi">
-            </p>
+            </li>
+            </ul>
           </fieldset>
           <fieldset>
             <legend>Питание:</legend>
-            <p>
+            <ul>
+            <li class="filter-radio">
               <label for="power-battery">Аккумуляторные</label>
               <input type="radio" name="power" value="battery" id="power-battery">
-            </p>
-            <p>
+            </li>
+            <li class="filter-radio">
               <label for="power-network">Сетевые</label>
               <input type="radio" name="power" value="network" id="power-network">
-            </p>
+            </li>
+            </ul>
           </fieldset>
-          <button type="submit">Показать</button>
+          <button class="button btn-filter" type="submit">Показать</button>
         </form>
       </section>
-      <section>
+      <section class="catalog">
         <h2>Товары каталога</h2>
         <p>Сортировка:</p>
         <ul>
@@ -142,8 +146,8 @@
         </ul>
         <button type="button">По возрастанию цены</button>
         <button type="button">По убыванию цены</button>
-        <ul>
-          <li>
+        <ul  class="catalog-list">
+          <li  class="catalog-item">
             <h3>Перфоратор BOSCH BFG 6000</h3>
             <button type="button">Купить</button>
             <button type="button">В закладки</button>
