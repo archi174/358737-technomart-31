@@ -886,3 +886,34 @@
 .catalog-item button:active {
   background-color: var(--special-green-dark);
 }
+
+/* Pagination */
+
+.pagination-list {
+  list-style: none;
+}
+
+.pagination-item a {
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--basic-black);
+  text-decoration: none;
+  border: 1px solid var(--special-grey-light);
+  border-radius: 2px;
+}
+
+.pagination-item a:hover,
+.pagination-item a:focus {
+  border-color: var(--special-grey);
+}
+
+.pagination-item a:active {
+  border-color: var(--basic-red);
+}
+
+.pagination-item-current a,
+.pagination-item-current a:hover,
+.pagination-item-current a:focus,
+.pagination-item-current a:active {
+  background-color: var(--basic-red);
+}
