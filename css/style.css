@@ -760,6 +760,7 @@
   font-weight: 18px;
   color: var(--basic-black);
   background-color: var(--special-brown-light);
+  text-transform: uppercase;
 }
 
 .filters legend {
@@ -803,4 +804,85 @@
   background-color: var(--basic-white);
   border: 1px solid var(--special-grey-light);
   text-transform: uppercase;
+}
+
+.catalog h2 {
+  font-size: 13px;
+  font-weight: 18px;
+  color: var(--basic-black);
+  background-color: var(--special-brown-light);
+  text-transform: uppercase;
+}
+
+.sort-list {
+  list-style: none;
+}
+
+.sort-item a {
+  font-size: 13px;
+  line-height: 18px;
+  opacity: 0.3;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-bottom: 1px dotted var(--basic-red);
+}
+
+.sort-item a:hover,
+.sort-item a:focus {
+  opacity: 1;
+  border-bottom: 1px solid var(--basic-red);
+}
+
+.sort-item a:active {
+  color: var(--basic-red);
+  border: none;
+}
+
+.catalog-list {
+  list-style: none;
+}
+
+.catalog-item {
+  text-align: center;
+}
+
+.catalog-item h3 {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px;
+  color: var(--basic-black);
+}
+
+.catalog-item del {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 18px;
+  color: var(--basic-gray);
+  text-transform: uppercase;
+}
+
+.btn-bay {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 18px;
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+  text-decoration: none;
+}
+
+.catalog-item button {
+  background-color: var(--special-green-bright);
+  text-transform: uppercase;
+  box-shadow: inset 0px -3px 0px var(--special-green-dark-extra);
+  border-radius: 2px;
+}
+
+.catalog-itemm button:hover,
+.catalog-item button:focus {
+  background-color: var(--special-green);
+}
+
+.catalog-item button:active {
+  background-color: var(--special-green-dark);
 }
