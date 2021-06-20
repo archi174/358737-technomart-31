@@ -139,7 +139,6 @@
 /* header */
 
 .main-header {
-  margin-bottom: 59px;
   padding-bottom: 60px;
   background-color: var(--basic-gray-extra-light);
 }
@@ -925,6 +924,12 @@
 
 /* catalog.html */
 
+.page-main-layout {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  align-content: start;
+}
+
 .user {
   font-family: "Cuprum", Arial, sans-serif;
   font-weight: normal;
@@ -962,6 +967,10 @@
 }
 
 .page-title {
+  grid-column: 1/-1;
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 30px;
   font-family: "Cuprum", Arial, sans-serif;
   font-weight: normal;
   font-size: 30px;
@@ -970,7 +979,15 @@
   background-color: var(--basic-gray-extra-light);
 }
 
+/* breadcrumbs */
+
 .breadcrumbs {
+  grid-column: 1/-1;
+  order: -1;
+  margin: 0;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  padding: 0;
   list-style: none;
 }
 
@@ -978,6 +995,8 @@
   color: var(--basic-black);
   text-decoration: none;
 }
+
+/* filters */
 
 .filters h2 {
   font-size: 13px;
@@ -1028,6 +1047,12 @@
   background-color: var(--basic-white);
   border: 1px solid var(--special-grey-light);
   text-transform: uppercase;
+}
+
+/* catalog */
+
+.catalog {
+  margin-left: 20px;
 }
 
 .catalog h2 {
@@ -1114,6 +1139,8 @@
 /* Pagination */
 
 .pagination-list {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
