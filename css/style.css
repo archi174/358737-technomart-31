@@ -1154,6 +1154,12 @@
   text-transform: uppercase;
 }
 
+/* modal */
+
+.modal-cart {
+  display: none;
+}
+
 .modal-cart p {
   font-family: "Cuprum", Arial, sans-serif;
   font-weight: normal;
