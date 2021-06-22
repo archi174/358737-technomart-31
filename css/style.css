@@ -306,8 +306,8 @@
 }
 
 .nav-list {
-  display: inline-flex;
-  justify-content: space-between;
+  display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
@@ -315,6 +315,8 @@
 }
 
 .nav-list a {
+  display: block;
+  padding: 16px 28px 20px;
   color: var(--basic-white);
   text-decoration: none;
 }
