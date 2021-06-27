@@ -738,7 +738,7 @@
   position: relative;
   padding: 5px;
   width: 208px;
-  min-height: 316px;
+  min-height: 306px;
   text-align: center;
   border: 1px solid var(--special-gray-extra-light);
   overflow: hidden;
@@ -864,7 +864,7 @@
 /* company */
 
 .company {
-  margin-bottom: 50px;
+  padding-bottom: 50px;
 }
 
 .company-title {
@@ -914,8 +914,9 @@
 }
 
 .company-item {
-  width: 218px;
-  height: 143px;
+  display: flex;
+  width: 220px;
+  height: 145px;
   background-color: var(--basic-white);
   border: 1px solid var(--special-gray-extra-light);
 }
@@ -928,6 +929,13 @@
 .company-item:active {
   opacity: 0.5;
 }
+
+.company-item a {
+  object-fit: contain;
+  margin: auto;
+}
+
+/* service */
 
 .service {
   background-color: var(--basic-gray-extra-light);
