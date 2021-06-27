@@ -679,11 +679,15 @@
   background-color: var(--special-red);
 }
 
+/* feature */
+
 .feature-title {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
+  padding-left: 28px;
+  padding-right: 14px;
   background-color: var(--special-brown-light-extra);
 }
 
@@ -696,18 +700,21 @@
   text-transform: uppercase;
 }
 
-.feature-title a {
+.products {
+  width: 192px;
+  padding-top: 11px;
+  padding-bottom: 9px;
   text-transform: uppercase;
   text-decoration: none;
   background-color: var(--basic-red);
 }
 
-.feature-title a:hover,
-.feature-title a:focus {
+.products:hover,
+.products:focus {
   background-color: var(--special-red-light);
 }
 
-.feature-title a:active {
+.products:active {
   background-color: var(--special-red);
 }
 
@@ -725,13 +732,32 @@
 }
 
 .features-item {
-  width: 218px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding: 5px;
+  width: 208px;
   min-height: 316px;
   text-align: center;
   border: 1px solid var(--special-gray-extra-light);
+  overflow: hidden;
+}
+
+.img-container {
+  order: -1;
+  display: flex;
+  height: 175px;
+}
+
+.img-container img {
+  object-fit: contain;
+  margin: auto;
 }
 
 .features-item h3 {
+  margin: 0;
+  margin: 0 18px 7px;
   font-weight: bold;
   font-size: 18px;
   line-height: 20px;
@@ -739,6 +765,7 @@
 }
 
 .features-item del {
+  margin-bottom: 14px;
   font-weight: bold;
   font-size: 17px;
   line-height: 18px;
@@ -746,31 +773,95 @@
   text-transform: uppercase;
 }
 
-.features-item a {
+.button-price {
+  position: relative;
+  padding: 10px 25px 10px 32px;
   font-family: "PT Sans", Arial, sans-serif;
   font-weight: bold;
   font-size: 17px;
   line-height: 18px;
   color: var(--basic-white);
   background-color: var(--basic-red);
+  text-decoration: none;
   border: none;
+  border-radius: 3px 0 0 3px;
 }
 
-.features-item button {
+.button-price::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: -19px;
+  width: 0;
+  height: 0;
+  border-top: 19px solid transparent;
+  border-left: 19px solid var(--basic-red);
+  border-bottom: 19px solid transparent;
+}
+
+.button-price:hover,
+.button-price:focus {
+  background-color: var(--special-red-light);
+}
+
+.button-price:active {
+  background-color: var(--special-red);
+}
+
+.button-price:hover::before,
+.button-price:focus::before {
+  border-top: 19px solid transparent;
+  border-left: 19px solid var(--special-red-light);
+  border-bottom: 19px solid transparent;
+}
+
+.button-price:active::before {
+  border-top: 19px solid transparent;
+  border-left: 19px solid var(--special-red);
+  border-bottom: 19px solid transparent;
+}
+
+.features-item::before {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 5px;
+  left: 145px;
+  content: "new";
+  width: 100px;
+  height: 30px;
+  font-family: "Cuprum", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+  text-transform: uppercase;
+  transform: rotate(45deg);
+}
+
+.new.features-item::before {
+  display: flex;
+}
+
+.button-bay {
   background-color: var(--special-green-bright);
   text-transform: uppercase;
   box-shadow: inset 0px -3px 0px var(--special-green-dark-extra);
   border-radius: 2px;
 }
 
-.features-item button:hover,
-.features-item button:focus {
+.button-bay:hover,
+.button-bay:focus {
   background-color: var(--special-green);
 }
 
-.features-item button:active {
+.button-bay:active {
   background-color: var(--special-green-dark);
 }
+
+/* company */
 
 .company {
   margin-bottom: 50px;
@@ -780,6 +871,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-left: 28px;
+  padding-right: 14px;
   margin-bottom: 20px;
   background-color: var(--special-brown-light-extra);
 }
@@ -793,18 +886,21 @@
   text-transform: uppercase;
 }
 
-.company-title a {
+.companies {
+  width: 192px;
+  padding-top: 11px;
+  padding-bottom: 9px;
   text-transform: uppercase;
   text-decoration: none;
   background-color: var(--basic-red);
 }
 
-.company-title a:hover,
-.company-title a:focus {
+.companies:hover,
+.companies:focus {
   background-color: var(--special-red-light);
 }
 
-.company-title a:active {
+.companies:active {
   background-color: var(--special-red);
 }
 
