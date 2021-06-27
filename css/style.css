@@ -78,6 +78,7 @@
   --special-green-dark-extra: #367315;
   --special-red: #BA2732;
   --special-red-light: #CA2C37;
+  --special-grey-dark: #3D546F;
   --special-grey: #C5C5C5;
   --special-grey-light: #E5E5E5;
   --special-gray-extra-light: #EAEAEA;
@@ -169,13 +170,12 @@
   margin-top: 12px;
 }
 
-.main-header-logo:hover,
-.main-header-logo:focus {
-  background-color: var(--basic-red);
-}
-
 .main-header-logo:active {
   background-color: var(--special-red);
+}
+
+.main-header-logo:not([href]):active {
+  background-color: var(--basic-red);
 }
 
 .form-header-search {
@@ -245,14 +245,17 @@
 
 .order-lists a {
   display: block;
-  min-width: 115px;
-  padding: 9px 15px;
+  min-width: 150px;
+  padding: 9px 10px 9px 15px;
   color: var(--basic-white);
   text-decoration: none;
+  white-space: nowrap;
+  box-sizing: border-box;
 }
 
-.bookmarks {
-
+.order-lists .bookmarks {
+  position: relative;
+  padding-left: 43px;
 }
 
 .bookmarks:active {
@@ -260,13 +263,53 @@
   background-color: var(--basic-blue-black);
 }
 
-.cart {
+.bookmarks::before {
+  position: absolute;
+  content: "";
+  top: 13px;
+  left: 20px;
+  width: 14px;
+  height: 16px;
+  background-image: url("../img/icon-bookmark.svg");
+  opacity: 0.3;
+}
 
+.order-lists .cart {
+  position: relative;
+  padding-left: 49px;
+}
+
+.cart::before {
+  position: absolute;
+  content: "";
+  top: 13px;
+  left: 26px;
+  width: 15px;
+  height: 15px;
+  background-image: url("../img/icon-cart.svg");
+  opacity: 0.3;
 }
 
 .cart:active {
   color: rgba(var(--basic-white-rgb), 0.5);
   background-color: var(--basic-blue-black);
+}
+
+.bookmarks:hover::before,
+.bookmarks:focus::before,
+.cart:hover::before,
+.cart:focus::before {
+  opacity: 1;
+}
+
+.bookmarks:active::before,
+.cart:active::before {
+  opacity: 0.3;
+}
+
+.bookmarks.bookmarks-active,
+.cart.cart-active {
+  background-color: var(--basic-red);
 }
 
 .order {
@@ -284,20 +327,22 @@
 }
 
 .header-layout {
-  display: flex;
+  display: grid;
+  grid-template-columns: 300px 1fr 300px;
   justify-content: space-between;
 }
 
 .header-content,
 .header-contacts,
 .header-account {
-  width: 300px;
   padding-top: 46px;
   padding-bottom: 40px;
 }
 
 .header-content {
   margin: 0;
+  padding-left: 30px;
+  padding-right: 70px;
   font-family: "Cuprum", Arial, sans-serif;
   font-style: italic;
   font-weight: normal;
@@ -307,7 +352,9 @@
 }
 
 .header-phone {
-  padding: 7px 45px 8px;
+  position: relative;
+  display: inline-block;
+  padding: 4px 46px 4px 70px;
   font-family: "Cuprum", Arial, sans-serif;
   font-weight: bold;
   font-size: 21px;
@@ -318,7 +365,20 @@
   text-decoration: none;
 }
 
+.header-phone::before {
+  position: absolute;
+  content: "";
+  top: 10px;
+  left: 36px;
+  height: 19px;
+  width: 19px;
+  background-image: url("../img/icon-phone.svg");
+}
+
 .header-address {
+  margin: 0;
+  margin-top: 3px;
+  margin-left: 5px;
   font-family: "Cuprum", Arial, sans-serif;
   font-weight: normal;
   font-size: 14px;
@@ -330,22 +390,39 @@
   text-align: right;
 }
 
-.header-account .login {
-  padding: 12px 27px;
+.login {
+  position: relative;
+  padding: 12px 27px 12px 45px;
   font-size: 21px;
   line-height: 21px;
   color: var(--basic-black);
   background-color: var(--basic-white);
   text-decoration: none;
 }
-
-.header-account .login:hover,
-.header-account .login:focus {
+.login:hover,
+.login:focus {
   color: var(--basic-red);
 }
 
-.header-account .login:active {
+.login:active {
   color: var(--special-grey);
+}
+
+.login svg {
+  position: absolute;
+  top: 13px;
+  left: 19px;
+  width: 20px;
+  height: 17px;
+}
+
+.login:hover path,
+.login:focus path {
+  fill: var(--special-grey-dark);
+}
+
+.login:active path {
+  fill: var(--special-grey);
 }
 
 .header-account .registration {
@@ -1092,13 +1169,20 @@
   align-content: start;
 }
 
+.user-block {
+  display: flex;
+}
+
 .user {
+  flex-grow: 1;
+  position: relative;
+  padding: 12px 0 12px 54px;
   font-family: "Cuprum", Arial, sans-serif;
   font-weight: normal;
   font-size: 21px;
   line-height: 21px;
   color: var(--basic-black);
-  background-color: rgba(var(--basic-black-rgb), 0.0001);
+  background-color: var(--basic-white);
   text-decoration: none;
 }
 
@@ -1106,14 +1190,97 @@
   color: var(--special-grey);
 }
 
-.user-orders,
-.user-account {
+.user svg {
+  position: absolute;
+  top: 13px;
+  left: 15px;
+  width: 20px;
+  height: 18px;
+}
+
+.user:hover path,
+.user:focus path {
+  fill: var(--special-grey-dark);
+}
+
+.user:active path {
+  fill: var(--special-grey);
+}
+
+.logout {
+  position: relative;
+  display: block;
+  width: 55px;
+  background-color: var(--basic-white);
+}
+
+.logout svg {
+  position: absolute;
+  top: 14px;
+  right: 17px;
+  width: 20px;
+  height: 17px;
+}
+
+.logout:hover path,
+.logout:focus path {
+  fill: var(--special-grey-dark);
+}
+
+.logout:active path {
+  fill: var(--special-grey);
+}
+
+.user-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0;
+  margin-top: 7px;
+  padding: 0;
+  list-style: none;
+}
+
+.user-list-item {
+  position: relative;
+  margin-right: 35px;
+}
+
+.user-list-item::after {
+  position: absolute;
+  content: "";
+  top: 10px;
+  right: -20px;
+  width: 4px;
+  height: 4px;
+  background-color: var(--basic-blue-light-dark);
+  border-radius: 50%;
+}
+
+.user-list-item:last-child {
+  margin-right: 0;
+}
+
+.user-list-item:last-child::after {
+  display: none;
+}
+
+.user-list a {
   font-family: "Cuprum", Arial, sans-serif;
   font-weight: normal;
   font-size: 16px;
   line-height: 18px;
   color: var(--basic-blue-light-dark);
   text-decoration: none;
+}
+
+.user-list a:hover,
+.user-list a:focus {
+  color: var(--basic-red);
+}
+
+.user-list a:active {
+  color: var(--special-grey);
 }
 
 .user-orders:hover,
