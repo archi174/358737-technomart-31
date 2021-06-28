@@ -32,10 +32,10 @@
         </form>
         <ul class="order-lists">
           <li class="order-item">
-            <a class="bookmarks" href="#">Закладки:0</a>
+            <a class="bookmarks" href="#">Закладки: 0</a>
           </li>
           <li class="order-item">
-            <a class="cart" href="#">Корзина:0</a>
+            <a class="cart" href="#">Корзина: 0</a>
           </li>
           <li class="order-item">
             <a class="order" href="#">Оформить заказ</a>
@@ -45,14 +45,20 @@
     </div>
     <div class="container header-layout">
       <p class="header-content">
-        Интернет-магазин строительных материалов и инструментов для ремонта
+        Интернет-магазин<br>строительных материалов и инструментов для ремонта
       </p>
       <div class="header-contacts">
         <a class="header-phone" href="tel:+78005558628">+7 800 555-86-28</a>
         <p class="header-address">г. Санкт-Петербург, наб. Реки Карповки, 5 лит П</p>
       </div>
       <div class="header-account">
-        <a class="button login" href="#">Войти</a>
+        <a class="button login" href="#">
+          <svg width="20" height="17" viewBox="0 0 20 17" fill="none">
+            <path d="M14.1667 8.5L5.71429 0V6H0V11H5.71429V17L14.1667 8.5Z" fill="#C5C5C5"/>
+            <path d="M16.1771 15.01H11.3895V17H16.1771C18.2514 17 19.0381 15.19 19.0619 13.974V3.028C19.0381 1.811 18.2514 0 16.1771 0H11.3895V1.99H16.1771C16.9762 1.99 17.1219 2.671 17.1391 3.047V13.951C17.1229 14.327 16.9762 15.01 16.1771 15.01Z" fill="#C5C5C5"/>
+          </svg>
+          Войти
+        </a>
         <a class="button registration" href="#">Регистрация</a>
       </div>
     </div>
@@ -90,7 +96,7 @@
       <section class="promo-block">
         <h2 class="visually-hidden">Промоблок материалов</h2>
         <div class="promo-block-grid">
-          <article class="promo-block-item materials">
+          <article class="promo-block-item materials new">
             <h3>Материалы</h3>
             <a class="button" href="#">На любой вкус</a>
           </article>
@@ -135,40 +141,48 @@
       <section class="features">
         <div class="feature-title">
           <h2>Популярные товары:</h2>
-          <a class="button" href="#">Все популярные товары</a>
+          <a class="button products" href="#">Все популярные товары</a>
         </div>
         <ul class="features-list">
           <li class="features-item">
             <h3>Перфоратор BOSCH BFG 9000</h3>
-            <button class="button" type="button">Купить</button>
-            <button class="button" type="button">В закладки</button>
-            <img src="img/product-1.jpg" width="184" height="164" alt="BFG 9000">
+            <!-- <button class="button button-bay" type="button">Купить</button>
+            <button class="button button-bookmark" type="button">В закладки</button> -->
+            <div class="img-container">
+              <img src="img/product-1.jpg" width="184" height="164" alt="BFG 9000">
+            </div>
             <del>32500р.</del>
-            <a class="button" href="#">25500р.</a>
+            <a class="button button-price" href="#">25500р.</a>
           </li>
-          <li class="features-item">
+          <li class="features-item new">
             <h3>Перфоратор BOSCH BFG 3000</h3>
-            <button class="button" type="button">Купить</button>
-            <button class="button" type="button">В закладки</button>
-            <img src="img/product-2.jpg" width="127" height="112" alt="BFG 3000">
+            <!-- <button class="button button-bay" type="button">Купить</button>
+            <button class="button button-bookmark" type="button">В закладки</button> -->
+            <div class="img-container">
+              <img src="img/product-2.jpg" width="127" height="112" alt="BFG 3000">
+            </div>
             <del>22500р.</del>
-            <a class="button" href="#">15500р.</a>
+            <a class="button button-price" href="#">15500р.</a>
           </li>
           <li class="features-item">
             <h3>Перфоратор BOSCH BFG 6000</h3>
-            <button class="button" type="button">Купить</button>
-            <button class="button" type="button">В закладки</button>
-            <img src="img/product-3.jpg" width="144" height="128" alt="BFG 6000">
+            <!-- <button class="button button-bay" type="button">Купить</button>
+            <button class="button button-bookmark" type="button">В закладки</button> -->
+            <div class="img-container">
+              <img src="img/product-3.jpg" width="144" height="128" alt="BFG 6000">
+            </div>
             <del>30500р.</del>
-            <a class="button" href="#">22500р.</a>
+            <a class="button button-price" href="#">22500р.</a>
           </li>
-          <li class="features-item">
+          <li class="features-item new">
             <h3>Перфоратор BOSCH BFG 2000</h3>
-            <button class="button" type="button">Купить</button>
-            <button class="button" type="button">В закладки</button>
-            <img src="img/product-4.jpg" width="127" height="112" alt="BFG 2000">
+            <!-- <button class="button button-bay" type="button">Купить</button>
+            <button class="button button-bookmark" type="button">В закладки</button> -->
+            <div class="img-container">
+              <img src="img/product-4.jpg" width="127" height="112" alt="BFG 2000">
+            </div>
             <del>22500р.</del>
-            <a class="button" href="#">12500р.</a>
+            <a class="button button-price" href="#">12500р.</a>
           </li>
         </ul>
       </section>
@@ -177,7 +191,7 @@
       <section class="company">
         <div class="company-title">
           <h2>Популярные производители:</h2>
-          <a class="button" href="#">Все производители</a>
+          <a class="button companies" href="#">Все производители</a>
         </div>
         <ul class="company-list">
           <li class="company-item">
@@ -186,7 +200,7 @@
             </a>
           </li>
           <li class="company-item">
-            <a href="">
+            <a href="#">
               <img src="img/makita.png" width="123" height="40" alt="Компания Makita">
             </a>
           </li>
@@ -216,7 +230,7 @@
             </a>
           </li>
           <li class="company-item">
-            <a href="">
+            <a href="#">
               <img src="img/metabo.png" width="206" height="73" alt="Metabo">
             </a>
           </li>
