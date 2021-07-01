@@ -1743,16 +1743,39 @@
   margin-left: 20px;
 }
 
+.catalog-top-menu {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+  background-color: var(--special-brown-light);
+}
+
+.control-block {
+  display: flex;
+}
+
 .catalog h2 {
+  flex-grow: 1;
+  margin: 10px 0 10px 20px;
   font-size: 13px;
   font-weight: 18px;
   color: var(--basic-black);
-  background-color: var(--special-brown-light);
   text-transform: uppercase;
 }
 
 .sort-list {
+  display: flex;
+  margin: 10px 20px;
+  padding: 0;
   list-style: none;
+}
+
+.sort-item {
+  margin-right: 65px;
+}
+
+.sort-item:last-child {
+  margin-right: 0;
 }
 
 .sort-item a {
@@ -1767,12 +1790,47 @@
 .sort-item a:hover,
 .sort-item a:focus {
   opacity: 1;
+  color: var(--basic-black);
   border-bottom: 1px solid var(--basic-red);
 }
 
 .sort-item a:active {
   color: var(--basic-red);
   border: none;
+}
+
+.sort-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 17px;
+  margin-left: 26px;
+  width: 43px;
+}
+
+.sort-top,
+.sort-bottom {
+  padding: 0;
+  border: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 11px solid var(--special-grey);
+}
+
+.sort-bottom {
+  transform: rotate(180deg);
+}
+
+.sort-top:hover,
+.sort-top:focus,
+.sort-bottom:hover,
+.sort-bottom:hover {
+  border-bottom: 11px solid var(--basic-black);
+}
+
+.sort-top:active,
+.sort-bottom:active {
+  border-bottom: 11px solid var(--basic-red);
 }
 
 .catalog-list {
@@ -1788,14 +1846,8 @@
 .catalog-item {
   width: 218px;
   min-height: 316px;
-  margin-right: 20px;
-  margin-bottom: 18px;
   text-align: center;
   border: 1px solid var(--special-gray-extra-light);
-}
-
-.catalog-item:nth-child(3n) {
-  margin-right: 0;
 }
 
 .catalog-item h3 {
