@@ -45,7 +45,7 @@
     </div>
     <div class="container header-layout">
       <p class="header-content">
-        Интернет-магазин<br>строительных материалов и инструментов для ремонта
+        Интернет-магазин<br>строительных материалов и&nbsp;инструментов для ремонта
       </p>
       <div class="header-contacts">
         <a class="header-phone" href="tel:+78005558628">+7 800 555-86-28</a>
@@ -414,10 +414,10 @@
       </div>
     </div>
   </footer>
-  <!-- раскидал модальное окно на grid. но не понимаю как фоновое поле для кнопки Отпарвить окрасить в фоновый цвет на всю ширину модально окна... -->
+  <!-- Модальное окно -->
   <section class="modal modal-message">
-    <h2>Форма для связи</h2>
-    <button class="modal-close" type="button">Закрыть</button>
+    <h2 class="visually-hidden">Форма для связи</h2>
+    <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
     <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
       <p class="form-name">
         <label for="contact-name">Ваше имя:</label>
@@ -429,15 +429,17 @@
       </p>
       <p class="form-message">
         <label for="contact-message">Текст письма:</label>
-        <textarea class="login-form-msg" name="message" id="contact-message" cols="30"
-          rows="5">В свободной форме</textarea>
+        <textarea class="login-form-msg" name="message" id="contact-message">В свободной форме</textarea>
       </p>
-      <button class="button" type="submit">Отправить</button>
+      <p class="content-bottom">
+        <button class="button" type="submit">Отправить</button>
+      </p>
     </form>
   </section>
+  <!-- Модальное окно -->
   <section class="modal modal-map">
-    <h2>Как до нас добраться</h2>
-    <button class="modal-close" type="button">Закрыть</button>
+    <h2 class="visually-hidden">Как до нас добраться</h2>
+    <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
     <img src="img/map-open.jpg" width="943" height="449" alt="Карта в большом окне">
   </section>
 </body>

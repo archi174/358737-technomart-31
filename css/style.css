@@ -66,6 +66,7 @@
   --basic-gray-extra-light: #F1F5F7;
   --basic-yellow: #FFD180;
 
+  --special-white-smoky: #F4F4F4;
   --special-yellow: #FFBF47;
   --special-blue: #3BBCE3;
   --special-blue-pale: #c1c6ce;
@@ -1590,33 +1591,69 @@
   transform: translate(-50%, -50%);
   background-color: var(--basic-white);
   border-top: 7px solid var(--basic-red);
-  filter: drop-shadow(0px 20px 40px rgba(var(--basic-black-rgb), 0.75));
+  box-shadow: 0px 4px 20px rgba(var(--basic-black-rgb), 0.15);
+}
+
+.modal-close {
+  position: absolute;
+  padding: 0;
+  width: 21px;
+  height: 21px;
+  background-color: transparent;
+  background-image: url("../img/icon-close.svg");
+  border: none;
+  cursor: pointer;
 }
 
 /* modal-message */
 
 .modal-message {
   display: none;
-  top: 100px;
-  bottom: auto;
-  width: 440px;
-  padding-top: 40px;
-  padding-left: 80px;
-  padding-right: 80px;
+  width: 620px;
+  padding-top: 26px;
+}
+
+.modal-message .modal-close {
+  top: 14px;
+  right: 11px;
 }
 
 .login-form {
   display: grid;
-  width: 460px;
   grid-template-columns: 1fr 1fr;
 }
 
-.login-form .form-message {
+.content-bottom {
   grid-column: 1/-1;
+  margin: 0;
+  padding: 37px 80px;
+  background-color: var(--special-white-smoky);
+}
+
+.form-name {
+  margin: 0;
+  padding-left: 80px;
+  padding-right: 10px;
+}
+
+.form-email {
+  margin: 0;
+  padding-right: 80px;
+  padding-left: 10px;
+}
+
+.form-message {
+  grid-column: 1/-1;
+  margin: 0;
+  margin-bottom: 37px;
+  padding-left: 80px;
+  padding-right: 80px;
 }
 
 .modal-message input,
 .modal-message textarea {
+  padding: 7px 8px 7px 12px;
+  width: 100%;
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 24px;
@@ -1624,9 +1661,17 @@
   color: var(--basic-gray);
   border: 2px solid var(--special-grey);
   border-radius: 2px;
+  box-sizing: border-box;
 }
 
-.modal-message label {
+.modal-message textarea {
+  min-height: 100px;
+}
+
+.login-form label {
+  display: block;
+  margin-top: 13px;
+  margin-bottom: 11px;
   font-family: "Cuprum", Arial, sans-serif;
   font-weight: normal;
   font-size: 18px;
@@ -1634,13 +1679,17 @@
   color: var(--basic-black);
 }
 
+.login-form-msg {
+  width: auto;
+}
+
 .modal-message button.button {
-  grid-column: 1/-1;
-  margin-top: 37px;
-  margin-bottom: 37px;
+  width: 100%;
+  padding: 10px;
   text-transform: uppercase;
   text-decoration: none;
   background-color: var(--basic-red);
+  box-sizing: border-box;
 }
 
 .modal-message button.button:hover,
@@ -1652,10 +1701,17 @@
   background-color: var(--special-red);
 }
 
+/* modal-map */
+
 .modal-map {
   display: none;
   width: 943px;
-  height: 449px;
+  height: 442px;
+}
+
+.modal-map .modal-close {
+  top: 14px;
+  right: 11px;
 }
 
 /* catalog.html */
