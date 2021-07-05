@@ -85,6 +85,8 @@
   --special-grey: #C5C5C5;
   --special-grey-rgb: 197, 197, 197;
   --special-grey-light: #E5E5E5;
+  --special-grey-medium: #ABABAB;
+  --special-grey-medium-rgb: 171, 171, 171;
   --special-gray-extra-light: #EAEAEA;
   --special-grey-agate: #B5B5B5;
   --special-brown-light-extra: #F9F5F0;
@@ -1926,7 +1928,21 @@
   width: 220px;
 }
 
-.filters fieldset {
+.filters h2 {
+  margin: 0;
+  padding: 10px 18px;
+  font-size: 13px;
+  font-weight: 18px;
+  color: var(--basic-black);
+  background-color: var(--special-brown-light);
+  text-transform: uppercase;
+}
+
+.filter-form {
+  margin-bottom: 10px;
+}
+
+.filter-form fieldset {
   margin: 0;
   margin-top: 16px;
   padding: 0;
@@ -1935,20 +1951,12 @@
   border-bottom: 1px solid var(--special-grey);
 }
 
-.filters fieldset:last-of-type {
+.filter-form fieldset:last-of-type {
   margin-bottom: 10px;
   border-bottom: none;
 }
 
-.filters h2 {
-  font-size: 13px;
-  font-weight: 18px;
-  color: var(--basic-black);
-  background-color: var(--special-brown-light);
-  text-transform: uppercase;
-}
-
-.filters legend {
+.filter-form legend {
   margin-bottom: 15px;
   font-weight: bold;
   font-size: 17px;
@@ -1956,7 +1964,7 @@
   text-transform: uppercase;
 }
 
-.filters ul {
+.filter-form ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1965,38 +1973,110 @@
   text-transform: uppercase;
 }
 
-.filter-form {
-  margin-bottom: 10px;
+.filter-form li:last-child label {
+  margin-bottom: 0;
 }
 
 .filter-form label {
   position: relative;
   display: block;
+  margin-bottom: 20px;
   cursor: pointer;
   user-select: none;
 }
 
-.filter-form label {
-  margin-bottom: 20px;
+/* range-filter */
+
+.range-controls {
+  height: 41px;
+  margin-bottom: 9px;
+  padding-top: 39px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: var(--special-brown-light);
 }
 
-.filter-form li:last-child label {
+.range-controls .scale {
+  height: 2px;
+  background-color: var(--special-grey);
+}
+
+.range-controls .bar {
+  position: relative;
+  width: 80%;
+  height: 2px;
+  background-color: var(--special-green-bright);
+}
+
+.range-controls .toggle {
+  width: 4px;
+  height: 4px;
+  background-color: var(--special-grey-medium);
+  border: 8px solid var(--basic-white);
+  border-radius: 50%;
+  box-shadow: 0 2px 0 0 rgba(var(--special-grey-medium-rgb), 0.3);
+  cursor: pointer;
+}
+
+.range-controls .toggle-min {
+  position: absolute;
+  top: -9px;
+  left: -9px;
+}
+
+.range-controls .toggle-max {
+  position: absolute;
+  top: -9px;
+  right: -9px;
+}
+
+.price-controls {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.price-controls::after {
+  position: absolute;
+  content: "";
+  top: 19px;
+  left: 105px;
+  width: 10px;
+  height: 1px;
+  background-color: var(--basic-black);
+}
+
+.price-controls label {
   margin-bottom: 0;
 }
 
-.filter-checkbox {
-  padding-left: 35px;
-}
-
-.filter-form input[type="text"] {
+.price-controls input {
+  width: 75px;
+  padding: 10px;
   font-size: 17px;
   line-height: 18px;
+  text-align: center;
+  color: var(--basic-black);
   background-color: var(--special-brown-light);
   border: none;
 }
 
-.filter-form input[type="range"] {
-  background-color: var(--special-brown-light);
+/* прячем стрелки в поле number */
+
+.price-controls input::-webkit-outer-spin-button,
+.price-controls input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.price-controls input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+/* filter-checkbox */
+
+.filter-checkbox {
+  padding-left: 35px;
 }
 
 .filter-input-checkbox + label::before {
@@ -2033,6 +2113,8 @@
 .filter-input-checkbox:checked:focus + label::after {
   border-color: var(--special-grey-agate);
 }
+
+/* filter-radio */
 
 .filter-radio {
   padding-left: 35px;

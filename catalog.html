@@ -137,12 +137,24 @@
         <form class="filter-form" action="https://echo.htmlacademy.ru" method="get">
           <fieldset>
             <legend>Цена:</legend>
-            <label for="filter-range"></label>
-            <input type="range" min="0" max="30000" value="5000" id="filter-range">
-            <label for="filter-min-price"></label>
-            <input type="text" name="min-price" value="0" id="filter-min-price" placeholder="0">
-            <label for="filter-max-price"></label>
-            <input type="text" name="max-price" value="30000" id="filter-max-price" placeholder="30000">
+            <div class="range-filter">
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar">
+                    <div class="toggle toggle-min" tabindex="0"></div>
+                    <div class="toggle toggle-max" tabindex="0"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="price-controls">
+                <label class="min-price">
+                  <input type="number" name="min-price" value="0">
+                </label>
+                <label class="max-price">
+                  <input type="number" name="max-price" value="30000">
+                </label>
+              </div>
+            </div>
           </fieldset>
           <fieldset>
             <legend>Производители:</legend>
