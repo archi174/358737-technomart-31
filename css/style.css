@@ -783,7 +783,7 @@
   display: none;
 }
 
-.slide-current {
+.promo-slider-slid.slide-current {
   display: flex;
 }
 
@@ -1247,6 +1247,10 @@
 .service-slider-item p {
   margin: 0;
   width: 330px;
+}
+
+.service-slider-item.slide-current {
+  display: block;
 }
 
 /* about */
