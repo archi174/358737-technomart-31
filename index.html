@@ -45,7 +45,7 @@
     </div>
     <div class="container header-layout">
       <p class="header-content">
-        Интернет-магазин<br>строительных материалов и инструментов для ремонта
+        Интернет-магазин<br>строительных материалов и&nbsp;инструментов для ремонта
       </p>
       <div class="header-contacts">
         <a class="header-phone" href="tel:+78005558628">+7 800 555-86-28</a>
@@ -54,8 +54,10 @@
       <div class="header-account">
         <a class="button login" href="#">
           <svg width="20" height="17" viewBox="0 0 20 17" fill="none">
-            <path d="M14.1667 8.5L5.71429 0V6H0V11H5.71429V17L14.1667 8.5Z" fill="#C5C5C5"/>
-            <path d="M16.1771 15.01H11.3895V17H16.1771C18.2514 17 19.0381 15.19 19.0619 13.974V3.028C19.0381 1.811 18.2514 0 16.1771 0H11.3895V1.99H16.1771C16.9762 1.99 17.1219 2.671 17.1391 3.047V13.951C17.1229 14.327 16.9762 15.01 16.1771 15.01Z" fill="#C5C5C5"/>
+            <path d="M14.1667 8.5L5.71429 0V6H0V11H5.71429V17L14.1667 8.5Z" fill="#C5C5C5" />
+            <path
+              d="M16.1771 15.01H11.3895V17H16.1771C18.2514 17 19.0381 15.19 19.0619 13.974V3.028C19.0381 1.811 18.2514 0 16.1771 0H11.3895V1.99H16.1771C16.9762 1.99 17.1219 2.671 17.1391 3.047V13.951C17.1229 14.327 16.9762 15.01 16.1771 15.01Z"
+              fill="#C5C5C5" />
           </svg>
           Войти
         </a>
@@ -118,21 +120,27 @@
           </article>
           <div class="promo-slider">
             <ul class="promo-slider-list">
-              <!-- <li class="promo-slider-slid">
-                <h3>Перфораторы</h3>
-                <p>Настоящие мужские игрушки</p>
+              <li class="promo-slider-slid slide-perforator slide slide-current">
+                <div class="slide-title">
+                  <h3>Перфораторы</h3>
+                  <p>Настоящие мужские игрушки</p>
+                </div>
                 <a class="button" href="catalog.html">Открыть каталог</a>
-                <img src="img/slide-promo-1.jpg" width="620" height="266" alt="Раздел перфораторы">
               </li>
-              <li class="promo-slider-slid">
-                <h3>Дрели</h3>
-                <p>Соседям на радость!</p>
+              <li class="promo-slider-slid slide-drill slide">
+                <div class="slide-title">
+                  <h3>Дрели</h3>
+                  <p>Соседям на радость!</p>
+                </div>
                 <a class="button" href="catalog.html">Открыть каталог</a>
-                <img src="img/slide-promo-2.jpg" width="620" height="266" alt="Раздел перфораторы">
               </li>
             </ul>
-            <button class="slider-btn-back" type="button">Назад</button>
-            <button class="slider-btn-next" type="button">Вперед</button> -->
+            <button class="slider-btn-back" type="button"><span class="visually-hidden">Назад</span></button>
+            <button class="slider-btn-next" type="button"><span class="visually-hidden">Вперед</span></button>
+            <div class="slider-contrls">
+              <button type="button"><span class="visually-hidden">Первый слайд</span></button>
+              <button type="button" class="current"><span class="visually-hidden">Второй слайд</span></button>
+            </div>
           </div>
         </div>
       </section>
@@ -146,40 +154,48 @@
         <ul class="features-list">
           <li class="features-item">
             <h3>Перфоратор BOSCH BFG 9000</h3>
-            <!-- <button class="button button-bay" type="button">Купить</button>
-            <button class="button button-bookmark" type="button">В закладки</button> -->
             <div class="img-container">
               <img src="img/product-1.jpg" width="184" height="164" alt="BFG 9000">
+              <p class="btn-container">
+                <button class="button button-bay" type="button">Купить</button>
+                <button class="button button-bookmark" type="button">В закладки</button>
+              </p>
             </div>
             <del>32500р.</del>
             <a class="button button-price" href="#">25500р.</a>
           </li>
           <li class="features-item new">
             <h3>Перфоратор BOSCH BFG 3000</h3>
-            <!-- <button class="button button-bay" type="button">Купить</button>
-            <button class="button button-bookmark" type="button">В закладки</button> -->
             <div class="img-container">
               <img src="img/product-2.jpg" width="127" height="112" alt="BFG 3000">
+              <p class="btn-container">
+                <button class="button button-bay" type="button">Купить</button>
+                <button class="button button-bookmark" type="button">В закладки</button>
+              </p>
             </div>
             <del>22500р.</del>
             <a class="button button-price" href="#">15500р.</a>
           </li>
           <li class="features-item">
             <h3>Перфоратор BOSCH BFG 6000</h3>
-            <!-- <button class="button button-bay" type="button">Купить</button>
-            <button class="button button-bookmark" type="button">В закладки</button> -->
             <div class="img-container">
               <img src="img/product-3.jpg" width="144" height="128" alt="BFG 6000">
+              <p class="btn-container">
+                <button class="button button-bay" type="button">Купить</button>
+                <button class="button button-bookmark" type="button">В закладки</button>
+              </p>
             </div>
             <del>30500р.</del>
             <a class="button button-price" href="#">22500р.</a>
           </li>
           <li class="features-item new">
             <h3>Перфоратор BOSCH BFG 2000</h3>
-            <!-- <button class="button button-bay" type="button">Купить</button>
-            <button class="button button-bookmark" type="button">В закладки</button> -->
             <div class="img-container">
               <img src="img/product-4.jpg" width="127" height="112" alt="BFG 2000">
+              <p class="btn-container">
+                <button class="button button-bay" type="button">Купить</button>
+                <button class="button button-bookmark" type="button">В закладки</button>
+              </p>
             </div>
             <del>22500р.</del>
             <a class="button button-price" href="#">12500р.</a>
@@ -241,47 +257,54 @@
       <div class="container">
         <h2>Сервисы</h2>
         <p class="service-content">
-          Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши
+          Хороший интернет-магазин отличается от плохого не только ценами!
+        </p>
+        <p class="service-content">
+          Мы стараемся изо всех сил, чтобы сделать ваши
           покупки приятными.
         </p>
         <div class="service-slider">
-          <div class="service-slider-btn">
-            <ul class="service-slider-tab">
-              <li class="tab-item"><button class="tab-current" type="button">Доставка</button></li>
-              <li class="tab-item"><button type="button">Гарантия</button></li>
-              <li class="tab-item"><button type="button">Кредит</button></li>
-            </ul>
-          </div>
+          <ul class="service-slider-tab">
+            <li class="tab-item"><button class="tab-current" type="button">Доставка</button></li>
+            <li class="tab-item"><button type="button">Гарантия</button></li>
+            <li class="tab-item"><button type="button">Кредит</button></li>
+          </ul>
           <div class="service-slider-content">
             <ul class="service-slider-list">
-              <li class="service-slider-item">
+              <li class="service-slider-item  slide-delivery slide  slide-current">
                 <h3>Доставка</h3>
                 <p>
-                  Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо
-                  заработаем, поднимая его на ваш этаж!
+                  Мы с удовольствием доставим ваш товар прямо<br>к вашему подъезду совершенно бесплатно!
+                </p>
+                <p>
+                  Ведь мы неплохо заработаем,<br>поднимая его на ваш этаж!
                 </p>
               </li>
-              <!-- <li class="service-slider-item">
+              <li class="service-slider-item slide-warranty slide">
                 <h3>Гарантия</h3>
                 <p>
                   Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его
-                  возгоранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж
+                  возгоранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом
+                  уж
                   восстановите как-нибудь сами.
                 </p>
               </li>
-              <li class="service-slider-item">
+              <li class="service-slider-item slide-credit slide">
                 <h3>Кредит</h3>
                 <p>
-                  Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.
+                  Залезть в долговую яму стало проще!
                 </p>
-              </li> -->
+                <p>
+                  Кредитные консультанты придут вам на помощь.
+                </p>
+                <a class="button" href="#">Отправить заявку</a>
+              </li>
             </ul>
           </div>
         </div>
       </div>
     </section>
-    <div class="container">
-      <section class="about">
+      <section class="about container">
         <h2 class="visually-hidden">О компании Техномарт</h2>
         <div class="about-content">
           <h3>Компания «Техномарт»</h3>
@@ -311,7 +334,6 @@
           <a class="button" href="#">Заблудились? Напишите нам!</a>
         </div>
       </section>
-    </div>
   </main>
   <footer class="main-footer">
     <div class="container">
@@ -392,10 +414,10 @@
       </div>
     </div>
   </footer>
-  <!-- раскидал модальное окно на grid. но не понимаю как фоновое поле для кнопки Отпарвить окрасить в фоновый цвет на всю ширину модально окна... -->
+  <!-- Модальное окно -->
   <section class="modal modal-message">
-    <h2>Форма для связи</h2>
-    <button class="modal-close" type="button">Закрыть</button>
+    <h2 class="visually-hidden">Форма для связи</h2>
+    <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
     <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
       <p class="form-name">
         <label for="contact-name">Ваше имя:</label>
@@ -407,15 +429,17 @@
       </p>
       <p class="form-message">
         <label for="contact-message">Текст письма:</label>
-        <textarea class="login-form-msg" name="message" id="contact-message" cols="30"
-          rows="5">В свободной форме</textarea>
+        <textarea class="login-form-msg" name="message" id="contact-message">В свободной форме</textarea>
       </p>
-      <button class="button" type="submit">Отправить</button>
+      <p class="content-bottom">
+        <button class="button" type="submit">Отправить</button>
+      </p>
     </form>
   </section>
+  <!-- Модальное окно -->
   <section class="modal modal-map">
-    <h2>Как до нас добраться</h2>
-    <button class="modal-close" type="button">Закрыть</button>
+    <h2 class="visually-hidden">Как до нас добраться</h2>
+    <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
     <img src="img/map-open.jpg" width="943" height="449" alt="Карта в большом окне">
   </section>
 </body>
