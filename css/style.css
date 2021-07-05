@@ -681,18 +681,17 @@
   background-repeat: no-repeat;
 }
 
-.promo-slider-slid:nth-child(1) {
+.slide-perforator {
   background-image: url("../img/slide-promo-1.jpg");
 }
 
-.promo-slider-slid:nth-child(2) {
+.slide-drill {
   background-image: url("../img/slide-promo-2.jpg");
 }
 
 .promo-slider-slid .button {
-  position: absolute;
-  left: 24px;
-  bottom: 27px;
+  margin-left: 24px;
+  margin-top: 97px;
   padding: 11px 46px 9px 46px;
   text-transform: uppercase;
   text-decoration: none;
@@ -1198,15 +1197,15 @@
   background-repeat: no-repeat;
 }
 
-.service-slider-item:nth-child(1) {
+.slide-delivery {
   background-image: url("../img/service-delivery.png");
 }
 
-.service-slider-item:nth-child(2) {
+.slide-warranty {
   background-image: url("../img/service-garant.png");
 }
 
-.service-slider-item:nth-child(3) {
+.slide-credit {
   background-image: url("../img/service-credit.png");
 }
 
@@ -1605,6 +1604,8 @@
 
 .modal-close {
   position: absolute;
+  top: 14px;
+  right: 11px;
   padding: 0;
   width: 21px;
   height: 21px;
