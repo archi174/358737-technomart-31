@@ -1392,6 +1392,10 @@
   background-color: var(--special-red);
 }
 
+.main-footer-logo:not([href]):active {
+  background-color: var(--basic-red);
+}
+
 .footer-nav {
   display: flex;
   flex-wrap: wrap;
