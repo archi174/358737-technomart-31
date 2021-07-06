@@ -334,6 +334,7 @@
 
 .header-layout {
   display: grid;
+  gap: 20px;
   grid-template-columns: 300px 1fr 300px;
   justify-content: space-between;
 }
@@ -360,7 +361,7 @@
 .header-phone {
   position: relative;
   display: inline-block;
-  padding: 4px 46px 4px 70px;
+  padding: 4px 47px 4px 71px;
   font-family: "Cuprum", Arial, sans-serif;
   font-weight: bold;
   font-size: 21px;
@@ -383,8 +384,8 @@
 
 .header-address {
   margin: 0;
-  margin-top: 3px;
-  margin-left: 5px;
+  margin-top: 4px;
+  margin-left: 6px;
   font-family: "Cuprum", Arial, sans-serif;
   font-weight: normal;
   font-size: 14px;
@@ -417,7 +418,7 @@
 .login svg {
   position: absolute;
   top: 13px;
-  left: 19px;
+  left: 18px;
   width: 20px;
   height: 17px;
 }
@@ -432,8 +433,8 @@
 }
 
 .header-account .registration {
-  margin-left: 10px;
-  padding: 12px 24px;
+  margin-left: 8px;
+  padding: 12px 23px;
   font-size: 21px;
   line-height: 21px;
   color: var(--basic-black);
@@ -518,8 +519,8 @@
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 5px;
-  left: 230px;
+  top: 9px;
+  left: 226px;
   content: "new";
   width: 100px;
   height: 30px;
@@ -531,6 +532,7 @@
   background-color: var(--basic-red);
   text-transform: uppercase;
   transform: rotate(45deg);
+  z-index: 5;
 }
 
 .new.promo-block-item::after {
@@ -757,8 +759,8 @@
 .slider-btn-back,
 .slider-btn-next {
   position: absolute;
-  width: 25px;
-  height: 25px;
+  width: 27px;
+  height: 27px;
   background-color: transparent;
   border-bottom: 0;
   border-left: 0;
@@ -768,14 +770,14 @@
 }
 
 .slider-btn-next {
-  right: 20px;
-  bottom: 104px;
+  right: 26px;
+  bottom: 110px;
   transform: rotate(45deg);
 }
 
 .slider-btn-back {
-  left: 24px;
-  bottom: 104px;
+  left: 30px;
+  bottom: 110px;
   transform: rotate(-135deg);
 }
 
@@ -800,6 +802,9 @@
 }
 
 .feature-title h2 {
+  margin: 0;
+  padding-top: 30px;
+  padding-bottom: 30px;
   font-family: "Cuprum", Arial, sans-serif;
   font-weight: normal;
   font-size: 30px;
@@ -845,9 +850,10 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-  padding: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
   width: 208px;
-  min-height: 306px;
+  min-height: 316px;
   text-align: center;
   border: 1px solid var(--special-gray-extra-light);
   overflow: hidden;
@@ -890,7 +896,7 @@
 .features-item h3,
 .catalog-item h3 {
   margin: 0;
-  margin: 0 18px 7px;
+  margin: 2px 18px 7px;
   font-weight: bold;
   font-size: 18px;
   line-height: 20px;
@@ -909,7 +915,7 @@
 
 .button-price {
   position: relative;
-  padding: 10px 25px 10px 32px;
+  padding: 10px 25px 10px 25px;
   font-family: "PT Sans", Arial, sans-serif;
   font-weight: bold;
   font-size: 17px;
@@ -961,8 +967,8 @@
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 5px;
-  left: 145px;
+  top: 8px;
+  left: 144px;
   content: "new";
   width: 100px;
   height: 30px;
@@ -974,6 +980,7 @@
   background-color: var(--basic-red);
   text-transform: uppercase;
   transform: rotate(45deg);
+  z-index: 5;
 }
 
 .features-item.new::before,
@@ -1034,7 +1041,7 @@
 /* company */
 
 .company {
-  padding-bottom: 50px;
+  padding-bottom: 70px;
 }
 
 .company-title {
@@ -1048,6 +1055,9 @@
 }
 
 .company-title h2 {
+  margin: 0;
+  padding-top: 30px;
+  padding-bottom: 30px;
   font-family: "Cuprum", Arial, sans-serif;
   font-weight: normal;
   font-size: 30px;
@@ -1116,7 +1126,6 @@
 
 .service {
   padding-top: 64px;
-  padding-bottom: 8px;
   background-color: var(--basic-gray-extra-light);
 }
 
@@ -1163,9 +1172,10 @@
 .service-slider-tab button {
   padding: 14px 22px 17px;
   width: 240px;
-  font-weight: bold;
+  font-family: "Cuprum", Arial, sans-serif;
   font-size: 21px;
   line-height: 30px;
+  font-weight: bold;
   color: var(--basic-white);
   background-color: var(--basic-blue-light-dark);
   text-align: left;
@@ -1258,7 +1268,7 @@
 .about {
   display: flex;
   justify-content: space-between;
-  padding-top: 66px;
+  padding-top: 70px;
   padding-bottom: 70px;
 }
 
@@ -1283,11 +1293,10 @@
 
 .about p {
   margin: 0;
-  margin-bottom: 32px;
 }
 
-.about-content p:last-of-type {
-  margin-bottom: 0;
+.about p:first-of-type {
+  margin-bottom: 30px;
 }
 
 .about-contacts p {
@@ -1435,8 +1444,9 @@
 }
 
 .footer-contacts {
-  width: 350px;
+  width: 335px;
   margin: 0;
+  margin-left: 3px;
   font-family: "Cuprum", Arial, sans-serif;
   font-weight: normal;
   font-size: 18px;
@@ -1456,7 +1466,7 @@
 
 .footer-bar-item a {
   display: block;
-  margin-left: 58px;
+  margin-left: 60px;
   padding: 5px 0;
   font-family: "Cuprum", Arial, sans-serif;
   font-weight: normal;
@@ -1488,7 +1498,8 @@
 
 .footer-copyright {
   margin: 0;
-  padding-right: 40px;
+  margin-left: 3px;
+  margin-right: 30px;
   width: 240px;
   font-family: "Cuprum", Arial, sans-serif;
   font-weight: normal;
@@ -1509,9 +1520,9 @@
 .footer-social .social-button {
   position: relative;
   display: block;
-  width: 44px;
-  height: 44px;
-  margin-right: 1px;
+  width: 41px;
+  height: 41px;
+  margin-right: 3px;
   text-decoration: none;
   color: var(--basic-white);
   background: linear-gradient(0deg, var(--special-blue-dark), var(--special-blue-dark));
@@ -1531,8 +1542,8 @@
 .footer-social .vk::after {
   content: "";
   position: absolute;
-  top: 14px;
-  left: 9px;
+  top: 13px;
+  left: 7px;
   width: 26px;
   height: 15px;
   background-image: url("../img/icon-vk.svg");
@@ -1543,7 +1554,7 @@
   content: "";
   position: absolute;
   top: 11px;
-  left: 16px;
+  left: 14px;
   width: 12px;
   height: 22px;
   background-image: url("../img/icon-fb.svg");
@@ -1553,8 +1564,8 @@
 .footer-social .inst::after {
   content: "";
   position: absolute;
-  top: 11px;
-  left: 11px;
+  top: 10px;
+  left: 10px;
   width: 21px;
   height: 21px;
   background-image: url("../img/icon-insta.svg");
@@ -1614,12 +1625,13 @@
   background-color: var(--basic-white);
   border-top: 7px solid var(--basic-red);
   box-shadow: 0px 4px 20px rgba(var(--basic-black-rgb), 0.15);
+  z-index: 10;
 }
 
 .modal-close {
   position: absolute;
-  top: 14px;
-  right: 11px;
+  top: 0px;
+  right: 0px;
   padding: 0;
   width: 21px;
   height: 21px;
@@ -1680,7 +1692,7 @@
 
 .modal-message input,
 .modal-message textarea {
-  padding: 7px 8px 7px 12px;
+  padding: 5px 10px;
   width: 100%;
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
@@ -1693,7 +1705,11 @@
 }
 
 .modal-message textarea {
-  min-height: 100px;
+  min-height: 114px;
+}
+
+.login-form p {
+  line-height: 0;
 }
 
 .login-form label {
