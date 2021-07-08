@@ -885,7 +885,7 @@
   margin: auto;
   max-width: 184px;
   max-height: 175px;
-  object-fit: containco;
+  object-fit: contain;
 }
 
 .btn-container {
@@ -2078,6 +2078,10 @@
   width: 10px;
   height: 1px;
   background-color: var(--basic-black);
+}
+
+.price-controls p {
+  margin: 0;
 }
 
 .price-controls label {
