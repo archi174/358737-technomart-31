@@ -342,7 +342,7 @@
 .header-content,
 .header-contacts,
 .header-account {
-  padding-top: 46px;
+  padding-top: 45px;
   padding-bottom: 40px;
 }
 
@@ -885,7 +885,7 @@
   margin: auto;
   max-width: 184px;
   max-height: 175px;
-  object-fit: containco;
+  object-fit: contain;
 }
 
 .btn-container {
@@ -1492,6 +1492,7 @@
 .footer-content-bottom .container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding-top: 35px;
   padding-bottom: 35px;
 }
@@ -1777,7 +1778,7 @@
 .user {
   flex-grow: 1;
   position: relative;
-  padding: 12px 0 12px 54px;
+  padding: 12px 0 12px 45px;
   font-family: "Cuprum", Arial, sans-serif;
   font-weight: normal;
   font-size: 21px;
@@ -1811,7 +1812,7 @@
 .logout {
   position: relative;
   display: block;
-  width: 55px;
+  width: 58px;
   background-color: var(--basic-white);
 }
 
@@ -1837,14 +1838,14 @@
   justify-content: center;
   flex-wrap: wrap;
   margin: 0;
-  margin-top: 7px;
+  margin-top: 5px;
   padding: 0;
   list-style: none;
 }
 
 .user-list-item {
   position: relative;
-  margin-right: 35px;
+  margin-right: 33px;
 }
 
 .user-list-item::after {
@@ -1899,7 +1900,7 @@
 .page-title {
   grid-column: 1/-1;
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 19px;
   padding: 30px;
   font-family: "Cuprum", Arial, sans-serif;
   font-weight: normal;
@@ -1918,24 +1919,24 @@
   grid-column: 1/-1;
   order: -1;
   margin: 0;
-  margin-bottom: 20px;
-  margin-top: 20px;
+  margin-bottom: 16px;
+  margin-top: 18px;
   padding: 0;
   list-style: none;
 }
 
 .breadcrumbs li {
   position: relative;
-  margin-right: 40px;
+  margin-right: 42px;
 }
 
 .breadcrumbs li:not(:last-child)::after {
   content: "";
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
   position: absolute;
-  top: 6px;
-  right: -25px;
+  top: 7px;
+  right: -23px;
   border: 1px solid var(--special-blue-pale);
   border-left: none;
   border-bottom: none;
@@ -1975,7 +1976,7 @@
 
 .filter-form fieldset {
   margin: 0;
-  margin-top: 16px;
+  margin-top: 13px;
   padding: 0;
   padding-bottom: 26px;
   border: none;
@@ -1988,7 +1989,7 @@
 }
 
 .filter-form legend {
-  margin-bottom: 15px;
+  margin-bottom: 12px;
   font-weight: bold;
   font-size: 17px;
   line-height: 30px;
@@ -1997,6 +1998,7 @@
 
 .filter-form ul {
   margin: 0;
+  margin-top: 10px;
   padding: 0;
   list-style: none;
   font-size: 15px;
@@ -2020,7 +2022,7 @@
 
 .range-controls {
   height: 41px;
-  margin-bottom: 9px;
+  margin-bottom: 8px;
   padding-top: 39px;
   padding-left: 20px;
   padding-right: 20px;
@@ -2052,14 +2054,14 @@
 
 .range-controls .toggle-min {
   position: absolute;
-  top: -9px;
-  left: -9px;
+  top: -10px;
+  left: -2px;
 }
 
 .range-controls .toggle-max {
   position: absolute;
-  top: -9px;
-  right: -9px;
+  top: -10px;
+  right: -15px;
 }
 
 .price-controls {
@@ -2076,6 +2078,10 @@
   width: 10px;
   height: 1px;
   background-color: var(--basic-black);
+}
+
+.price-controls p {
+  margin: 0;
 }
 
 .price-controls label {
@@ -2246,7 +2252,7 @@
 }
 
 .sort-item {
-  margin-right: 65px;
+  margin-right: 66px;
 
 }
 
@@ -2282,8 +2288,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-right: 17px;
-  margin-left: 26px;
+  margin-right: 16px;
+  margin-left: 45px;
   width: 43px;
 }
 
@@ -2294,7 +2300,7 @@
   background-color: transparent;
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
-  border-bottom: 11px solid var(--special-grey);
+  border-bottom: 10px solid var(--special-grey);
 }
 
 .sort-bottom {
@@ -2334,23 +2340,23 @@
   list-style: none;
 }
 
-.pagination-item {
-  margin-right: 10px;
-}
-
-.pagination-item:last-child {
-  margin-right: 0;
-}
-
 .pagination-item a {
   display: block;
-  padding: 10px 15px;
+  margin-right: 9px;
+  padding: 9px 15px;
   font-size: 13px;
   line-height: 18px;
   color: var(--basic-black);
+  text-transform: uppercase;
   text-decoration: none;
   border: 1px solid var(--special-grey-light);
   border-radius: 2px;
+}
+
+.pagination-item:last-child a {
+  margin-right: 0;
+  padding-left: 32px;
+  padding-right: 32px;
 }
 
 .pagination-item a:hover,
@@ -2406,7 +2412,7 @@
 }
 
 .modal-cart .modal-close {
-  top: 14px;
+  top: 12px;
   right: 11px;
 }
 
@@ -2446,7 +2452,7 @@
 }
 
 .btn-order {
-  margin-right: 10px;
+  margin-right: 6px;
   background-color: var(--basic-red);
   text-transform: uppercase;
   text-decoration: none;
