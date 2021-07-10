@@ -72,6 +72,7 @@
   --special-blue: #3BBCE3;
   --special-blue-pale: #c1c6ce;
   --special-blue-dark: #212A3A;
+  --special-blue-extra-dark: #1D2739;
   --special-blue-light-dark: #405069;
   --special-pink: #DC91D8;
   --special-green: #5FBB2D;
@@ -129,6 +130,7 @@
   line-height: 18px;
   color: var(--basic-white);
   text-align: center;
+  vertical-align: middle;
   border: none;
 }
 
@@ -368,8 +370,9 @@
   line-height: 30px;
   color: var(--basic-red);
   background-color: var(--basic-gray-light);
-  border: 3px solid var(--basic-white);
   text-decoration: none;
+  vertical-align: middle;
+  border: 3px solid var(--basic-white);
 }
 
 .header-phone::before {
@@ -483,6 +486,7 @@
 }
 
 .nav-list a:active {
+  background-color: var(--special-blue-extra-dark);
   opacity: 0.5;
 }
 
@@ -802,6 +806,7 @@
 }
 
 .feature-title h2 {
+  max-width: 680px;
   margin: 0;
   padding-top: 30px;
   padding-bottom: 30px;
@@ -888,6 +893,16 @@
   object-fit: contain;
 }
 
+.img-container img.small {
+  margin-top: 29px;
+  margin-right: 12px;
+}
+
+.img-container img.medium {
+  margin-top: 21px;
+  margin-right: 12px;
+}
+
 .btn-container {
   display: none;
   padding: 0;
@@ -914,8 +929,12 @@
 }
 
 .button-price {
+  align-self: flex-start;
   position: relative;
-  padding: 10px 25px 10px 25px;
+  margin-top: auto;
+  margin-bottom: 21px;
+  margin-left: 40px;
+  padding: 10px 25px 10px 32px;
   font-family: "PT Sans", Arial, sans-serif;
   font-weight: bold;
   font-size: 17px;
@@ -1208,7 +1227,8 @@
 }
 
 .service-slider-item {
-  min-height: 283px;
+  min-height: 270px;
+  padding-bottom: 13px;
   background-position: bottom right;
   background-repeat: no-repeat;
 }
@@ -1299,8 +1319,9 @@
   margin-bottom: 30px;
 }
 
-.about-contacts p {
+.about .about-contacts p {
   width: 180px;
+  margin-bottom: 35px;
 }
 
 .about-list {
@@ -1345,6 +1366,10 @@
 .about a.button:hover,
 .about a.button:focus {
   background-color: var(--special-red-light);
+}
+
+.about a.button:active {
+  background-color: var(--special-red);
 }
 
 .about-contacts a.button {
@@ -1482,6 +1507,7 @@
 }
 
 .footer-bar-item a:active {
+  text-decoration: none;
   opacity: 0.5;
 }
 
@@ -1984,7 +2010,7 @@
 }
 
 .filter-form fieldset:last-of-type {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   border-bottom: none;
 }
 
@@ -1994,6 +2020,10 @@
   font-size: 17px;
   line-height: 30px;
   text-transform: uppercase;
+}
+
+.filter-form .legend-filter-radio {
+  margin-bottom: 18px;
 }
 
 .filter-form ul {
@@ -2104,12 +2134,12 @@
 
 .price-controls input::-webkit-outer-spin-button,
 .price-controls input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+  -webkit-appearance: none;
+  margin: 0;
 }
 
-.price-controls input[type='number'] {
-    -moz-appearance:textfield;
+.price-controls input[type="number"] {
+  -moz-appearance:textfield;
 }
 
 /* filter-checkbox */
@@ -2153,6 +2183,19 @@
   border-color: var(--special-grey-agate);
 }
 
+.filter-input-checkbox:disabled + label,
+.filter-input-checkbox:checked:disabled + label {
+  color: var(--basic-black);
+  opacity: 0.4;
+}
+
+.filter-input-checkbox:disabled + label::before,
+.filter-input-checkbox:checked:disabled + label::before,
+.filter-input-checkbox:disabled + label::after,
+.filter-input-checkbox:checked:disabled + label::after {
+  border-color: var(--special-grey-agate);
+}
+
 /* filter-radio */
 
 .filter-radio {
@@ -2189,6 +2232,22 @@
 .filter-input-radio:checked:hover + label::after,
 .filter-input-radio:checked:focus + label::after {
   background-color: var(--special-grey-agate);
+}
+
+.filter-input-radio:disabled + label,
+.filter-input-radio:checked:disabled + label {
+  color: var(--basic-black);
+  opacity: 0.4;
+}
+
+.filter-input-radio:disabled + label::before,
+.filter-input-radio:checked:disabled + label::before {
+  border-color: var(--special-grey-agate);
+}
+
+.filter-input-radio:disabled + label::after,
+.filter-input-radio:checked:disabled + label::after {
+  background-color: var(--special-grey);
 }
 
 .filter-form .btn-filter {
@@ -2245,6 +2304,7 @@
 
 .sort-list {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   margin: 0;
   padding: 0;
@@ -2441,7 +2501,7 @@
   left: -70px;
   width: 66px;
   height: 66px;
-  background-image: url(../img/icon-mark.svg);
+  background-image: url("../img/icon-mark.svg");
 }
 
 .btn-order,
