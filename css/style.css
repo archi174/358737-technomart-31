@@ -2282,7 +2282,6 @@
 
 .catalog-top-menu {
   display: flex;
-  flex-wrap: wrap;
   margin-bottom: 28px;
   background-color: var(--special-brown-light);
   border-radius: 3px;
@@ -2290,10 +2289,12 @@
 
 .control-block {
   display: flex;
+  align-items: flex-start;
 }
 
 .catalog h2 {
   flex-grow: 1;
+  min-width: 100px;
   margin: 0;
   padding: 10px 0 10px 20px;
   font-size: 13px;
@@ -2308,6 +2309,8 @@
   flex-wrap: wrap;
   align-items: center;
   margin: 0;
+  margin-top: 7px;
+  margin-bottom: 7px;
   padding: 0;
   list-style: none;
 }
@@ -2349,9 +2352,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-right: 16px;
-  margin-left: 45px;
-  width: 43px;
+  margin: 13px 16px 13px 45px;
+  min-width: 43px;
 }
 
 .sort-top,
@@ -2385,6 +2387,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
+  grid-row-gap: 18px;
   margin: 0;
   margin-bottom: 48px;
   padding: 0;
